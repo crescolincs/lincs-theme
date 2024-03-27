@@ -2,21 +2,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Invest Lincolnshire</title>
+    <title>{{ .Params.title }}</title>
 
     <meta name="description" content="">
 
     <!-- Open Graph -->
-    <meta property='og:title' content="">
-    <meta property="og:description" content="">
-    <meta property="og:type" content="">
-    <meta property="og:url" content="">
-    <meta property="og:image" content="">
+    <meta property='og:title' content="{{ .Params.title }}">
+    <meta property="og:description" content="{{ .Params.seo-description }}">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="{{ .Permalink }}">
+    <meta property="og:image" content="{{ .Params.social-image }}">
 
     <!-- Twitter Card -->
-    <meta property="twitter:title" content="">
-    <meta property="twitter:card" content="">
-    <meta property="twitter:description" content="">
+    <meta property="twitter:title" content="{{ .Params.title }}">
+    <meta property="twitter:card" content="summary">
+    <meta property="twitter:description" content="{{ .Params.seo-description }}">
     <meta property="twitter:image" content="">
     {{ partialCached "head/css.html" . }}
 
