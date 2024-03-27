@@ -49,8 +49,10 @@
 
 .section_header-50-50 .d-flex{align-items:center;}
 
+.card svg{transition: 500ms;}
+
  .card:hover .fa-arrow-right, .card:hover svg, .findoutmore:hover .fa-arrow-right, .findoutmore:hover svg{ 
-    margin-right: -10px; transition: 500ms ease-in-out;
+    margin-right: -10px; /*transition: 500ms ease-in-out;*/
 }
 
 .clr-aem{color:#1c1434;fill:#1c1434;}
