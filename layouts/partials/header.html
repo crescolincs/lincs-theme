@@ -1,2 +1,45 @@
-<h1>{{ site.Title }}</h1>
-{{ partial "menu.html" (dict "menuID" "main" "page" .) }}
+<nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container align-items-end">
+
+        <a class="navbar-brand" href="/">
+            <img src="/images/invest-lincs-logo.png" alt="Invest Lincolnshire">
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="toggle-icon"><p class="sr-only">Menu</p><i class="fa-sharp fa-regular fa-bars"></i></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="pt-3 pt-lg-0 w-100 d-flex flex-column justify-content-end align-items-start align-items-lg-end">
+                <span class="contact-wrapper"><a href="/pages/get-in-touch.html" class="nav-link contact-link">Contact Us <i class="fa-sharp fa-solid fa-arrow-right"></i></a></span>
+                <ul class="navbar-nav mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Support Services</a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuAboutLink" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Growth Sectors
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuAboutLink">
+                            <a class="dropdown-item" href="#">Advanced Engineering & Manufacturing</a>
+                            <a class="dropdown-item" href="#">Agrifood</a>
+                            <a class="dropdown-item" href="#">Defence & Security</a>
+                            <a class="dropdown-item" href="#">Logistics</a>
+
+                        </div>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Living & Working</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Location & Connectivity</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+
+    </div>
+</nav>
