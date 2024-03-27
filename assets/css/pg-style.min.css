@@ -49,17 +49,15 @@
 
 .section_header-50-50 .d-flex{align-items:center;}
 
- .card:hover .fa-arrow-right, .findoutmore:hover .fa-arrow-right{ margin-right: -10px; }
+ .card:hover .fa-arrow-right, .card:hover svg, .findoutmore:hover .fa-arrow-right, .findoutmore:hover svg{ margin-right: -10px; }
 
-.clr-aem{color:#1c1434;}
-.clr-agrifood{color:#009e7f;}
-.clr-defence{color:#cf4952;}
-.clr-logistics{color:#e75a13;}
-.clr-lowcarbon{color:#0689a6;}
-.clr-irobotics{color:#98989c;}
+.clr-aem{color:#1c1434;fill:#1c1434;}
+.clr-agrifood{color:#009e7f;fill:#009e7f;}
+.clr-defence{color:#cf4952;fill:#cf4952;}
+.clr-logistics{color:#e75a13;fill:#e75a13;}
+.clr-lowcarbon{color:#0689a6;fill:#0689a6;}
+.clr-irobotics{color:#98989c;fill:#98989c;}
 
-.section_50-50-sectors .card {
-    border: 0
-}
+.section_50-50-sectors .card {border: 0}
 
 .nav-item.dropdown.sectors:hover #sector-dropdown{display:block;}
