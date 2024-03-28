@@ -9,7 +9,9 @@
     {{ partial "header.html" . }}
   </header>
   
-    {{ partial "page-home.html" . }}
+  {{ block "main" . }}
+    {{ .Content }}
+  {{ end }}
   
   <footer id="footer">
     {{ partial "footer.html" . }}

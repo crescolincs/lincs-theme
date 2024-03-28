@@ -2,8 +2,12 @@
     {{ if .Params.hero.display }}
       {{ partial "hero.html" . }}
     {{ end }}
+    
     {{ partial "entrance/support.html" . }}
-    {{ partial "entrance/growthsectors.html" . }}
+
+    {{ if .Params.growth-sectors.display }}
+      {{ partial "entrance/growthsectors.html" . }}
+    {{ end }}
 
 
 
