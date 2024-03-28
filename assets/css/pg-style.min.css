@@ -72,8 +72,8 @@
 
 .nav-item.dropdown.sectors:hover #sector-dropdown{display:block;}
 
-.navbar-collapse[show] {
-    animation: fade-in 500ms forwards;
+.navbar-collapse[open] {
+    animation: fade-in 2000ms forwards;
   }
 
 @keyframes fade-in {
