@@ -19,4 +19,7 @@ function dodd() { //dodd: do dropdown
   }
 
   //
-  function openmm(){document.getElementById("navbarSupportedContent").classList.toggle("show").toggleAttribute("open");}
+  function openmm(){mobnav = document.getElementById("navbarSupportedContent");
+  mobnav.classList.toggle("show");
+  mobnav.toggleAttribute("open");
+}
