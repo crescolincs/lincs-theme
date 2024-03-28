@@ -2,55 +2,24 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <h2 class="h2-large text-dark-blue">Support for Businesses Investing in the UK</h2>
-                <p>Invest Lincolnshire’s expert support for businesses investing in Lincolnshire includes:</p>
+                <h2 class="h2-large text-dark-blue">{{ .Params.support.heading}}</h2>
+                <p>{{ .Params.support.subheading}}</p>
             </div>
         </div>
         <div class="row justify-content-center">
-            <div class="col-6 col-lg-3 card-wrapper">
-                <div class="img-wrapper">
-                    <img loading="lazy" src="https://images.weserv.nl/?url=https://res.cloudinary.com/lincs/image/upload/w_90,h_90,c_fit,q_auto,f_auto/property-icon.png" alt="">
-                </div>
-                <div class="h3 text-center"><span class="d-block fw-bold">Property</span><span class="d-block">search and selection</span></div>
-            </div>
-            <div class="col-6 col-lg-3 card-wrapper">
-                <div class="img-wrapper">
-                    <img loading="lazy" src="https://images.weserv.nl/?url=https://res.cloudinary.com/lincs/image/upload/w_90,h_90,c_fit,q_auto,f_auto/planning-icon.png" alt="">
-                </div>
-                <h3 class="text-center"><span class="d-block fw-bold">Planning</span><span class="d-block">support and guidance</span></h3>
-            </div>
-            <div class="col-6 col-lg-3 card-wrapper">
-                <div class="img-wrapper">
-                    <img loading="lazy" src="https://images.weserv.nl/?url=https://res.cloudinary.com/lincs/image/upload/w_90,h_90,c_fit,q_auto,f_auto/location-icon.png" alt="">
-                </div>
-                <h3 class="text-center"><span class="d-block fw-bold">Location</span><span class="d-block">and market intelligence</span></h3>
-            </div>
-            <div class="col-6 col-lg-3 card-wrapper">
-                <div class="img-wrapper">
-                    <img loading="lazy" src="https://images.weserv.nl/?url=https://res.cloudinary.com/lincs/image/upload/w_90,h_90,c_fit,q_auto,f_auto/workforce-icon.png" alt="">
-                </div>
-                <h3 class="text-center"><span class="d-block fw-bold">Workforce</span><span class="d-block">recruitment and training</span></h3>
-            </div>
-            <div class="col-6 col-lg-3 card-wrapper">
-                <div class="img-wrapper">
-                    <img loading="lazy" src="https://images.weserv.nl/?url=https://res.cloudinary.com/lincs/image/upload/w_90,h_90,c_fit,q_auto,f_auto/sector-icon.png" alt="">
-                </div>
-                <h3 class="text-center"><span class="d-block fw-bold">Sector</span><span class="d-block">knowledge and expertise</span></h3>
-            </div>
-            <div class="col-6 col-lg-3 card-wrapper">
-                <div class="img-wrapper">
-                    <img loading="lazy" src="https://images.weserv.nl/?url=https://res.cloudinary.com/lincs/image/upload/w_90,h_90,c_fit,q_auto,f_auto/business-icon.png" alt="">
-                </div>
-                <h3 class="text-center"><span class="d-block fw-bold">Business</span><span class="d-block">networks and supply chains</span></h3>
-            </div>
-            <div class="col-6 col-lg-3 card-wrapper">
-                <div class="img-wrapper">
-                    <img loading="lazy" src="https://images.weserv.nl/?url=https://res.cloudinary.com/lincs/image/upload/w_90,h_90,c_fit,q_auto,f_auto/funding-icon.png" alt="">
-                </div>
-                <h3 class="text-center"><span class="d-block fw-bold">Funding</span><span class="d-block">for business investment</span></h3>
-            </div>
+            <!-- START support areas-->
+            {{ range .Params.support.areas }}
+              <div class="col-6 col-lg-3 card-wrapper">
+                  <div class="img-wrapper">
+                      <img loading="lazy" src="https://images.weserv.nl/?url=https://res.cloudinary.com/lincs/image/upload/w_90,h_90,c_fit,q_auto,f_auto/{{ .icon }}" alt="">
+                  </div>
+                  <div class="h3 text-center"><span class="d-block fw-bold">{{ .title }}</span><span class="d-block">{{ .description }}</span></div>
+              </div>
+            {{ end }}
+
+            <!-- End Support Areas -->
             <div class="col-12 col-sm-6 col-lg-3 end-card-wrapper position-relative d-flex flex-column justify-content-between findoutmore">
-                <h3><a class="full-card-click arrow-link" href="#"><span class="first-line d-block fw-bold text-uppercase">Find out more</span><span class="d-block">about Invest Lincolnshire's support services for investing businesses</span></a></h3>
+                <h3><a class="full-card-click arrow-link" href="{{ .Params.support.cta.destination }}"><span class="first-line d-block fw-bold text-uppercase">{{ .Params.support.cta.title }}</span><span class="d-block">{{ .Params.support.cta.blurb }}</span></a></h3>
                 <div class="btn-wrapper d-flex justify-content-end">
                     <i xxxclass="fa-sharp fa-regular fa-arrow-right"><svg fill="white" width="26.5px" height="30px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M5.975 17.504l14.287.001-6.367 6.366L16.021 26l10.004-10.003L16.029 6l-2.128 2.129 6.367 6.366H5.977z"></path></svg></i>
                 </div>

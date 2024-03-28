@@ -2,8 +2,9 @@
     {{ if .Params.hero.display }}
       {{ partial "hero.html" . }}
     {{ end }}
-
-    {{ partial "entrance/support.html" . }}
+    {{ if .Params.support.display }}
+      {{ partial "entrance/support.html" . }}
+    {{ end }}
 
     {{ if .Params.growthsectors.display }}
       {{ partial "entrance/growthsectors.html" . }}
