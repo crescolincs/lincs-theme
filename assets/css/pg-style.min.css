@@ -68,4 +68,6 @@
 
 .section_50-50-sectors .card {border: 0}
 
+.navbar-collapse.show svg{fill:#000;}
+
 .nav-item.dropdown.sectors:hover #sector-dropdown{display:block;}
