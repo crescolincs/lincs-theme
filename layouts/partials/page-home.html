@@ -1,6 +1,7 @@
 <main id="main" class="page_home">
-
-    {{ partial "hero.html" . }}
+    {{ if .Params.hero.display }}
+      {{ partial "hero.html" . }}
+    {{ end }}
     {{ partial "entrance/support.html" . }}
     {{ partial "entrance/growthsectors.html" . }}
 
