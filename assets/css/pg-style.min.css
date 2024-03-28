@@ -71,3 +71,25 @@
 .navbar-collapse.show svg{fill:#000;}
 
 .nav-item.dropdown.sectors:hover #sector-dropdown{display:block;}
+
+.navbar-collapse[show] {
+    animation: fade-in 500ms forwards;
+  }
+
+@keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fade-out {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
