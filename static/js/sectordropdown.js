@@ -19,4 +19,4 @@ function dodd() { //dodd: do dropdown
   }
 
   //
-  function openmobmenu(){document.getElementById("navbarSupportedContent").classList.toggle("show");}
+  function openmm(){document.getElementById("navbarSupportedContent").classList.toggle("show");}
