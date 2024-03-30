@@ -1,11 +1,12 @@
     <link rel="preload" href="webfonts/JosefinSans-VariableFont_wght.ttf" as="font" type="font/ttf" crossorigin="anonymous">
     <link rel="preload" href="webfonts/Montserrat-VariableFont_wght.ttf" as="font" type="font/ttf" crossorigin="anonymous">
-    <meta charset="UTF-8">
+    <link rel="preload" as="script" href="js/sectordropdown.min.js">
+        <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>{{ .Params.title }}</title>
 
-    <meta name="description" content="">
+    <meta name="description" content="{{ .Params.seoDescription}}">
 
     <!-- Open Graph -->
     <meta property='og:title' content="{{ .Params.title }}">
