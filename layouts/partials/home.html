@@ -1,20 +1,20 @@
 <main id="main" class="page_home">
-    {{ if .Params.hero.display }}
+    {{ if .Params.entrance-hero.display }}
       {{ partial "hero.html" . }}
     {{ end }}
-    {{ if .Params.support.display }}
+    {{ if .Params.entrance-support.display }}
       {{ partial "entrance/support.html" . }}
     {{ end }}
 
-    {{ if .Params.growthsectors.display }}
+    {{ if .Params.entrance-growthsectors.display }}
       {{ partial "entrance/growthsectors.html" . }}
     {{ end }}
 
-    {{ if .Params.othersectors.display }}
+    {{ if .Params.entrance-othersectors.display }}
       {{ partial "entrance/othersectors.html" . }}
     {{ end }}
 
-    {{ if .Params.locationmap.display }}
+    {{ if .Params.entrance-locationmap.display }}
       {{ partial "entrance/locationmap.html" . }}
     {{ end }}
 
