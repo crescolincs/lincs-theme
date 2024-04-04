@@ -1,11 +1,11 @@
 {{- with resources.Get "css/pg-style.min.css" }}
   {{- if eq hugo.Environment "development" }}
    <!-- <link rel="stylesheet" href="{{ .RelPermalink }}">-->
-    <link rel="stylesheet" href="css/optima.css">
+    <link rel="stylesheet" href="css/optima.css  | relURL">
   {{- else }}
     {{- with . | minify | fingerprint }}
       <!-- <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous"> -->
-      <link rel="stylesheet" href="css/optima.css" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
+      <link rel="stylesheet" href="css/optima.css | relURL" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
     {{- end }}
   {{- end }}
 {{- end }}
