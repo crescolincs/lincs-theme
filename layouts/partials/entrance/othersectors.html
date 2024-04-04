@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row">
             <!-- other sectors start-->
-            {{ range .Params.entranceothersectors.sectors }}
+            {{ range .Params.entranceothersectors.sectors . }}
             <div class="col-12 col-lg-6 position-relative">
                 <h2 class="h2-small text-dark-blue">{{ .overheading }}</h2>
                 <div class="card">
