@@ -3,9 +3,6 @@
 <!-- header -->
 <style>
 /* Contact Styles*/
-.section_contact-form {
-    padding: 0 0 9.0625rem;
-}
 .section_contact-form .field-wrapper label {
     font-family: montserrat,sans-serif;
     font-size: 1rem;
@@ -98,8 +95,28 @@
     color: #fff;
     line-height: 1.5rem;
 }
-
-@media (min-width: 992px){
+.section_contact-form .field-wrapper .checkbox-label input:checked~.checkmark:after {
+    display: block;
+}
+.section_contact-form .field-wrapper .checkbox-label .checkmark:after {
+    border: solid #fff;
+    border-width: 0 3px 3px 0;
+    height: .875rem;
+    left: .6875rem;
+    top: .375rem;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    width: .5rem;
+}
+.section_contact-form .field-wrapper .checkbox-label .checkmark:after {
+    content: "";
+    display: none;
+    position: absolute;
+}
+.section_contact-form .field-wrapper .checkbox-label input:checked~.checkmark {
+    background-color: #cf4952;
+}
+media (min-width: 992px){
 .offset-lg-1 {
     margin-left: 8.33333333%;
 }
