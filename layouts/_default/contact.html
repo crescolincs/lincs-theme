@@ -24,7 +24,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-12 col-lg-7 mb-4 mb-lg-0">
-                    <form>
+                    <form action="processcontact" method="'POST'">
                         <div class="field-wrapper">
                             <label for="full-name">Name<span>*</span></label>
                             <input type="text" id="full-name" name="full-name" required>
@@ -57,17 +57,17 @@
                     <div class="contact-details">
                         <div class="d-flex">
                             <i class="fa-light fa-envelope"></i>
-                            <a class="ms-4" href="mailto:">info@xxxxxxx.co.uk</a>
+                            <a class="ms-4" href="mailto:">{{ .Params.email }}</a>
                         </div>
 
                         <hr>
 
-                        <p><span class="fw-bold">Greater Lincolnshire LEP</span><br>
-                            Lincolnshire County Council<br>
-                            Council Offices<br>
-                            Newland<br>
-                            Lincoln<br>
-                            LN1 1YL
+                        <p><span class="fw-bold">{{ .Params.organisation }}</span><br>
+                            {{ .Params.address1 }}<br>
+                            {{ .Params.address2 }}<br>
+                            {{ .Params.address3 }}<br>
+                            {{ .Params.town }}<br>
+                            {{ .Params.postcode }}
                         </p>
 
                         <div class="social-icons d-flex">
