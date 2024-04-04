@@ -13,13 +13,13 @@
     <meta property="og:description" content="{{ .Params.seoDescription }}">
     <meta property="og:type" content="article">
     <meta property="og:url" content="{{ .Permalink }}">
-    <meta property="og:image" content="https://res.cloudinary.com/lincs/image/upload/q_auto,f_auto/{{ .Params.socialImage }}">
+    <meta property="og:image" content="{{ .Site.Params.imagedomain }}{{ .Params.socialImage }}">
 
     <!-- Twitter Card -->
     <meta property="twitter:title" content="{{ .Params.title }}">
     <meta property="twitter:card" content="summary">
     <meta property="twitter:description" content="{{ .Params.seoDescription }}">
-    <meta property="twitter:image" content="https://res.cloudinary.com/lincs/image/upload/q_auto,f_auto/{{ .Params.socialImage }}">
+    <meta property="twitter:image" content="{{ .Site.Params.imagedomain }}{{ .Params.socialImage }}">
      {{ partial "head/css.html" . }}
 
 
