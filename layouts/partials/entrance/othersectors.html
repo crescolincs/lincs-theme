@@ -2,12 +2,12 @@
     <div class="container">
         <div class="row">
             <!-- other sectors start-->
-            {{ range .Params.entranceothersectors.sectors . }}
+            {{ range .Params.entranceothersectors.sectors }}
             <div class="col-12 col-lg-6 position-relative">
                 <h2 class="h2-small text-dark-blue">{{ .overheading }}</h2>
                 <div class="card">
                     <div class="card-header">
-                        <img loading="lazy" src="{{ .Site.Params.imagedomain }}w_636,h_390,c_fit/{{ .image }}" alt="photo highlighting {{ .overheading }}">
+                        <img loading="lazy" src="{{.Site.Params.imagedomain}}w_636,h_390,c_fit/{{ .image }}" alt="photo highlighting {{ .overheading }}">
                     </div>
                     <div class="card-body">
                         <h3><a class="full-card-click arrow-link" href="{{ .destination }}">{{ .heading }}</a></h3>
