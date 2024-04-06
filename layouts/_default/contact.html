@@ -225,7 +225,8 @@
     </section>
 
     {{ with site.GetPage "home" }}
-    {{ .Title }}
+    {{ .Title }}<br/>
+    {{ .Params.entrancehero.blurb }}
     {{ end }}
 </main>
 
