@@ -221,12 +221,12 @@
                     </div>
                 </div>
             </div>
-            {{ with site.GetPage "home" }}
-            {{ partial "entrance/growthsectors.html" . }}
-            {{ end }}
+
         </div>
     </section>
-
+    {{ with site.GetPage "home" }}
+    {{ partial "entrance/growthsectors.html" . }}
+    {{ end }}
 
 </main>
 
