@@ -1,171 +1,59 @@
+{{$imagedomain := string .Site.Params.imagedomain }}
 <section class="section_logo-grid">
-    <div class="container">
+    <div class="xcontainer">
         <div class="row">
             <div class="col-12">
-                <h2 class="h2-small text-dark-blue text-center">Home to Leading Agrifood Businesses</h2>
-                <p class="text-center">Businesses established in Lincolnshire’s agrifood sector include:</p>
+                <h2 class="h2-small text-dark-blue text-center">{{ .Params.companylogos.heading }}</h2>
+                <p class="text-center">{{ .Params.companylogos.subheading }}</p>
             </div>
         </div>
-        <div class="row logo-slider slick-initialized slick-slider slick-dotted"><div class="slick-list draggable"><div class="slick-track" style="opacity: 1; width: 6600px; transform: translate3d(-1320px, 0px, 0px);"><div class="slick-slide slick-cloned" data-slick-index="-4" id="" aria-hidden="true" tabindex="-1" style="width: 330px;"><div><div class="col-6 col-lg-3" style="width: 100%; display: inline-block;">
-                <div class="logo-wrapper">
-                    <a href="#" tabindex="-1"><img loading="lazy" src="/images/owr-logo.png" alt=""></a>
-                </div>
-            </div></div><div><div class="col-6 col-lg-3" style="width: 100%; display: inline-block;">
-                <div class="logo-wrapper">
-                    <a href="#" tabindex="-1"><img loading="lazy" src="/images/thorvald-logo.png" alt=""></a>
-                </div>
-            </div></div></div><div class="slick-slide slick-cloned" data-slick-index="-3" id="" aria-hidden="true" tabindex="-1" style="width: 330px;"><div><div class="col-6 col-lg-3" style="width: 100%; display: inline-block;">
-                <div class="logo-wrapper">
-                    <a href="#" tabindex="-1"><img loading="lazy" src="/images/gea-logo.png" alt=""></a>
-                </div>
-            </div></div><div><div class="col-6 col-lg-3" style="width: 100%; display: inline-block;">
-                <div class="logo-wrapper">
-                    <a href="#" tabindex="-1"><img loading="lazy" src="/images/myenergy-logo.png" alt=""></a>
-                </div>
-            </div></div></div><div class="slick-slide slick-cloned" data-slick-index="-2" id="" aria-hidden="true" tabindex="-1" style="width: 330px;"><div><div class="col-6 col-lg-3" style="width: 100%; display: inline-block;">
-                <div class="logo-wrapper">
-                    <a href="#" tabindex="-1"><img loading="lazy" src="/images/fliegl-logo.png" alt=""></a>
-                </div>
-            </div></div><div><div class="col-6 col-lg-3" style="width: 100%; display: inline-block;">
-                <div class="logo-wrapper">
-                    <a href="#" tabindex="-1"><img loading="lazy" src="/images/grimme-logo.png" alt=""></a>
-                </div>
-            </div></div></div><div class="slick-slide slick-cloned" data-slick-index="-1" id="" aria-hidden="true" tabindex="-1" style="width: 330px;"><div><div class="col-6 col-lg-3" style="width: 100%; display: inline-block;">
-                <div class="logo-wrapper">
-                    <a href="#" tabindex="-1"><img loading="lazy" src="/images/bright-lite-logo.png" alt=""></a>
-                </div>
-            </div></div><div><div class="col-6 col-lg-3" style="width: 100%; display: inline-block;">
-                <div class="logo-wrapper">
-                    <a href="#" tabindex="-1"><img loading="lazy" src="/images/shd-logo.png" alt=""></a>
-                </div>
-            </div></div></div><div class="slick-slide slick-current slick-active" data-slick-index="0" aria-hidden="false" role="tabpanel" id="slick-slide00" style="width: 330px;"><div><div class="col-6 col-lg-3" style="width: 100%; display: inline-block;">
-                <div class="logo-wrapper d-flex justify-content-center align-items-center">
-                    <a href="#" tabindex="0"><img loading="lazy" src="/images/bae-systems-logo.png" alt=""></a>
-                </div>
-            </div></div><div><div class="col-6 col-lg-3" style="width: 100%; display: inline-block;">
-                <div class="logo-wrapper">
-                    <a href="#" tabindex="0"><img loading="lazy" src="/images/teledyne-logo.png" alt=""></a>
-                </div>
-            </div></div></div><div class="slick-slide slick-active" data-slick-index="1" aria-hidden="false" role="tabpanel" id="slick-slide01" style="width: 330px;"><div><div class="col-6 col-lg-3" style="width: 100%; display: inline-block;">
-                <div class="logo-wrapper">
-                    <a href="#" tabindex="0"><img loading="lazy" src="/images/rfmw-logo.png" alt=""></a>
-                </div>
-            </div></div><div><div class="col-6 col-lg-3" style="width: 100%; display: inline-block;">
-                <div class="logo-wrapper">
-                    <a href="#" tabindex="0"><img loading="lazy" src="/images/raytheon-logo.png" alt=""></a>
-                </div>
-            </div></div></div><div class="slick-slide slick-active" data-slick-index="2" aria-hidden="false" role="tabpanel" id="slick-slide02" style="width: 330px;"><div><div class="col-6 col-lg-3" style="width: 100%; display: inline-block;">
-                <div class="logo-wrapper">
-                    <a href="#" tabindex="0"><img loading="lazy" src="/images/collins-logo.png" alt=""></a>
-                </div>
-            </div></div><div><div class="col-6 col-lg-3" style="width: 100%; display: inline-block;">
-                <div class="logo-wrapper">
-                    <a href="#" tabindex="0"><img loading="lazy" src="/images/dynex-logo.png" alt=""></a>
-                </div>
-            </div></div></div><div class="slick-slide slick-active" data-slick-index="3" aria-hidden="false" role="tabpanel" id="slick-slide03" style="width: 330px;"><div><div class="col-6 col-lg-3" style="width: 100%; display: inline-block;">
-                <div class="logo-wrapper">
-                    <a href="#" tabindex="0"><img loading="lazy" src="/images/siemens-logo.png" alt=""></a>
-                </div>
-            </div></div><div><div class="col-6 col-lg-3" style="width: 100%; display: inline-block;">
-                <div class="logo-wrapper">
-                    <a href="#" tabindex="0"><img loading="lazy" src="/images/autocraft-logo.png" alt=""></a>
-                </div>
-            </div></div></div><div class="slick-slide" data-slick-index="4" aria-hidden="true" tabindex="-1" role="tabpanel" id="slick-slide04" style="width: 330px;"><div><div class="col-6 col-lg-3" style="width: 100%; display: inline-block;">
-                <div class="logo-wrapper">
-                    <a href="#" tabindex="-1"><img loading="lazy" src="/images/owr-logo.png" alt=""></a>
-                </div>
-            </div></div><div><div class="col-6 col-lg-3" style="width: 100%; display: inline-block;">
-                <div class="logo-wrapper">
-                    <a href="#" tabindex="-1"><img loading="lazy" src="/images/thorvald-logo.png" alt=""></a>
-                </div>
-            </div></div></div><div class="slick-slide" data-slick-index="5" aria-hidden="true" tabindex="-1" role="tabpanel" id="slick-slide05" style="width: 330px;"><div><div class="col-6 col-lg-3" style="width: 100%; display: inline-block;">
-                <div class="logo-wrapper">
-                    <a href="#" tabindex="-1"><img loading="lazy" src="/images/gea-logo.png" alt=""></a>
-                </div>
-            </div></div><div><div class="col-6 col-lg-3" style="width: 100%; display: inline-block;">
-                <div class="logo-wrapper">
-                    <a href="#" tabindex="-1"><img loading="lazy" src="/images/myenergy-logo.png" alt=""></a>
-                </div>
-            </div></div></div><div class="slick-slide" data-slick-index="6" aria-hidden="true" tabindex="-1" role="tabpanel" id="slick-slide06" style="width: 330px;"><div><div class="col-6 col-lg-3" style="width: 100%; display: inline-block;">
-                <div class="logo-wrapper">
-                    <a href="#" tabindex="-1"><img loading="lazy" src="/images/fliegl-logo.png" alt=""></a>
-                </div>
-            </div></div><div><div class="col-6 col-lg-3" style="width: 100%; display: inline-block;">
-                <div class="logo-wrapper">
-                    <a href="#" tabindex="-1"><img loading="lazy" src="/images/grimme-logo.png" alt=""></a>
-                </div>
-            </div></div></div><div class="slick-slide" data-slick-index="7" aria-hidden="true" tabindex="-1" role="tabpanel" id="slick-slide07" style="width: 330px;"><div><div class="col-6 col-lg-3" style="width: 100%; display: inline-block;">
-                <div class="logo-wrapper">
-                    <a href="#" tabindex="-1"><img loading="lazy" src="/images/bright-lite-logo.png" alt=""></a>
-                </div>
-            </div></div><div><div class="col-6 col-lg-3" style="width: 100%; display: inline-block;">
-                <div class="logo-wrapper">
-                    <a href="#" tabindex="-1"><img loading="lazy" src="/images/shd-logo.png" alt=""></a>
-                </div>
-            </div></div></div><div class="slick-slide slick-cloned" data-slick-index="8" id="" aria-hidden="true" tabindex="-1" style="width: 330px;"><div><div class="col-6 col-lg-3" style="width: 100%; display: inline-block;">
-                <div class="logo-wrapper d-flex justify-content-center align-items-center">
-                    <a href="#" tabindex="-1"><img loading="lazy" src="/images/bae-systems-logo.png" alt=""></a>
-                </div>
-            </div></div><div><div class="col-6 col-lg-3" style="width: 100%; display: inline-block;">
-                <div class="logo-wrapper">
-                    <a href="#" tabindex="-1"><img loading="lazy" src="/images/teledyne-logo.png" alt=""></a>
-                </div>
-            </div></div></div><div class="slick-slide slick-cloned" data-slick-index="9" id="" aria-hidden="true" tabindex="-1" style="width: 330px;"><div><div class="col-6 col-lg-3" style="width: 100%; display: inline-block;">
-                <div class="logo-wrapper">
-                    <a href="#" tabindex="-1"><img loading="lazy" src="/images/rfmw-logo.png" alt=""></a>
-                </div>
-            </div></div><div><div class="col-6 col-lg-3" style="width: 100%; display: inline-block;">
-                <div class="logo-wrapper">
-                    <a href="#" tabindex="-1"><img loading="lazy" src="/images/raytheon-logo.png" alt=""></a>
-                </div>
-            </div></div></div><div class="slick-slide slick-cloned" data-slick-index="10" id="" aria-hidden="true" tabindex="-1" style="width: 330px;"><div><div class="col-6 col-lg-3" style="width: 100%; display: inline-block;">
-                <div class="logo-wrapper">
-                    <a href="#" tabindex="-1"><img loading="lazy" src="/images/collins-logo.png" alt=""></a>
-                </div>
-            </div></div><div><div class="col-6 col-lg-3" style="width: 100%; display: inline-block;">
-                <div class="logo-wrapper">
-                    <a href="#" tabindex="-1"><img loading="lazy" src="/images/dynex-logo.png" alt=""></a>
-                </div>
-            </div></div></div><div class="slick-slide slick-cloned" data-slick-index="11" id="" aria-hidden="true" tabindex="-1" style="width: 330px;"><div><div class="col-6 col-lg-3" style="width: 100%; display: inline-block;">
-                <div class="logo-wrapper">
-                    <a href="#" tabindex="-1"><img loading="lazy" src="/images/siemens-logo.png" alt=""></a>
-                </div>
-            </div></div><div><div class="col-6 col-lg-3" style="width: 100%; display: inline-block;">
-                <div class="logo-wrapper">
-                    <a href="#" tabindex="-1"><img loading="lazy" src="/images/autocraft-logo.png" alt=""></a>
-                </div>
-            </div></div></div><div class="slick-slide slick-cloned" data-slick-index="12" id="" aria-hidden="true" tabindex="-1" style="width: 330px;"><div><div class="col-6 col-lg-3" style="width: 100%; display: inline-block;">
-                <div class="logo-wrapper">
-                    <a href="#" tabindex="-1"><img loading="lazy" src="/images/owr-logo.png" alt=""></a>
-                </div>
-            </div></div><div><div class="col-6 col-lg-3" style="width: 100%; display: inline-block;">
-                <div class="logo-wrapper">
-                    <a href="#" tabindex="-1"><img loading="lazy" src="/images/thorvald-logo.png" alt=""></a>
-                </div>
-            </div></div></div><div class="slick-slide slick-cloned" data-slick-index="13" id="" aria-hidden="true" tabindex="-1" style="width: 330px;"><div><div class="col-6 col-lg-3" style="width: 100%; display: inline-block;">
-                <div class="logo-wrapper">
-                    <a href="#" tabindex="-1"><img loading="lazy" src="/images/gea-logo.png" alt=""></a>
-                </div>
-            </div></div><div><div class="col-6 col-lg-3" style="width: 100%; display: inline-block;">
-                <div class="logo-wrapper">
-                    <a href="#" tabindex="-1"><img loading="lazy" src="/images/myenergy-logo.png" alt=""></a>
-                </div>
-            </div></div></div><div class="slick-slide slick-cloned" data-slick-index="14" id="" aria-hidden="true" tabindex="-1" style="width: 330px;"><div><div class="col-6 col-lg-3" style="width: 100%; display: inline-block;">
-                <div class="logo-wrapper">
-                    <a href="#" tabindex="-1"><img loading="lazy" src="/images/fliegl-logo.png" alt=""></a>
-                </div>
-            </div></div><div><div class="col-6 col-lg-3" style="width: 100%; display: inline-block;">
-                <div class="logo-wrapper">
-                    <a href="#" tabindex="-1"><img loading="lazy" src="/images/grimme-logo.png" alt=""></a>
-                </div>
-            </div></div></div><div class="slick-slide slick-cloned" data-slick-index="15" id="" aria-hidden="true" tabindex="-1" style="width: 330px;"><div><div class="col-6 col-lg-3" style="width: 100%; display: inline-block;">
-                <div class="logo-wrapper">
-                    <a href="#" tabindex="-1"><img loading="lazy" src="/images/bright-lite-logo.png" alt=""></a>
-                </div>
-            </div></div><div><div class="col-6 col-lg-3" style="width: 100%; display: inline-block;">
-                <div class="logo-wrapper">
-                    <a href="#" tabindex="-1"><img loading="lazy" src="/images/shd-logo.png" alt=""></a>
-                </div>
-            </div></div></div></div></div><ul class="slick-dots" style="" role="tablist"><li class="slick-active" role="presentation"><button type="button" role="tab" id="slick-slide-control00" aria-controls="slick-slide00" aria-label="1 of 2" tabindex="0" aria-selected="true">1</button></li><li role="presentation"><button type="button" role="tab" id="slick-slide-control01" aria-controls="slick-slide04" aria-label="2 of 2" tabindex="-1">2</button></li></ul></div>
+    <style>
+    :root{
+    --hzdcontainerwidth: 100%;
+    --hzd-full: 100%/*min(820px,90%)*/;
+    --hzd-half: 49.99%/*min(820px,90%)*/;
+    --hzd-third: 33.3333%;
+    --hzd-quarter: 25%/*min(820px,90%)*/;
+    --hzd-fifth: 20%/*min(820px,90%)*/;
+    --hzd-eighth: 12.5%;
+    --hzd-tenth:10%;
+  }
+      .hzcontainer{
+    margin-inline: auto;
+    max-width: max(80rem,var(--hzdcontainerwidth));
+    overflow-y: auto;
+     
+  }
+  .hzcontainer{
+    display: grid;
+    grid-template-columns: 1fr var(--imagewidthmed) 1fr; 
+    grid-auto-flow: column;
+    grid-gap: 12px;
+    max-width: calc(50px+var(--imagewidthmed)+50px);
+  }
+  .hzcontainer img {
+      width: 100%;
+      padding: 1rem;
+  }
+  .hzcontainer > .scroller {
+      display: grid;
+      grid-auto-columns: var(--imagewidthmed);
+      grid-auto-flow: column;
+      grid-gap: 8px;
+      overflow-x: auto;
+      /*scrollbar-color: #fff #fff; /* yellow #000;  #499980 */
+      max-width: 100%;
+      margin: 1rem auto 1rem auto;
+      cursor: grabbing;  
+  }
+    #scroller1{max-width: 98%;grid-auto-columns: var(--hzd-tenth);grid-gap:3rem;}
+</style>
+<div class="hzcontainer">
+         <div class="scroller hidescrollbar" id="scroller1">
+            {{ range .Params.companylogos.companies }}
+             <img src="{{ $imagedomain }}{{.logo }}" alt="{{ .name }}">
+             {{ }}
+         </div>
+  </div>
     </div>
 </section>
