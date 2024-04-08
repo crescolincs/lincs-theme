@@ -1,0 +1,34 @@
+{[$imagedomain := string .Site.Params.imagedomain }}
+<section class="section_investment-opportunity-block">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h2 class="h2-large text-dark-blue">{{ .Params.investmentopportunity.heading}}</h2>
+                <p>{{ .Params.investmentopportunity.subheading}}</p>
+            </div>
+        </div>
+        <div class="container">
+          <div class="row xrow-cols-sm-1 xrow-cols-md-2">
+            {{$len := len .Params.investmentopportunity.offer }}    <!-- len .Params.investmentopportunity.offer -->
+            {{range $index, $element := .Params.investmentopportunity.offer}}
+               {{ if and (eq (add $index 1) $len ) (not (modBool $index 2)) }}
+               <div class="col-md-6 offset-md-6"> 
+               {{ else }}
+               <div class="col-md-6">
+               {{ end }}
+  
+                 <div class="opp-wrapper d-flex align-items-center">
+                   <div class="icon-wrapper">
+                      <img src="{{ $element.icon }}"/>
+                   </div>
+                   <div class="text-wrapper">
+                      <h3>{{ $element.title }}</h3>
+                      <p>{{ $element.description }}</p>
+                    </div>
+                 </div>
+               </div>
+               {{ end }}
+          </div>
+        </div>
+        </div>
+      </section>
