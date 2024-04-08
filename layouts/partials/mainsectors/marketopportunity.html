@@ -1,17 +1,15 @@
+{{$imagedomain := string .Site.Params.imagedomain }}
 <section class="section_list-and-stats mb-5">
     <div class="container">
         <div class="row">
             <div class="col-12 col-lg-5 pe-3 pe-lg-0">
-                <h2 class="h2-small text-sector-mid">The UK Agrifood Market Opportunity</h2>
-                <p class="lead-text text-sector-dark">The UK’s agrifood sector presents a range of opportunities for business investment, growth and reshoring. Key drivers include:</p>
+                <h2 class="h2-small text-sector-mid">{{ .Params.marketopportunity.heading }}</h2>
+                <p class="lead-text text-sector-dark">{{ .Params.marketopportunity.lead }}</p>
 
                 <ul>
-                    <li><span class="text-sector-mid">67.5 million UK consumers</span> spending £254 billion annually on food and drink</li>
-                    <li><span class="text-sector-mid">Reduced integration</span> with EU supply chains (post-Brexit)</li>
-                    <li><span class="text-sector-mid">Renewed focus on food security</span> (post-Covid-19 and recent conflicts)</li>
-                    <li><span class="text-sector-mid">Plans for sustainable, net-zero carbon food chains</span></li>
-                    <li><span class="text-sector-mid">Productivity goals and workforce constraints</span> (a global agrifood industry challenge) driving demand for new technologies</li>
-                    <li><span class="text-sector-mid">Growing UK demand</span> for added-value premium and niche products such as vegan, organic, more nutritious and ‘free-from’ foods</li>
+                    {{range .Params.marketopportunity.benefits }}
+                    <li><span class="text-sector-mid">{{ .benefit }}</span> {{ .feature }}</li>
+                    {{ end }}
                 </ul>
 
                 <div class="download-block border-sector-dark position-relative d-flex justify-content-between">
