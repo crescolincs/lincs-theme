@@ -33,9 +33,9 @@
                     {{ else}}
                     <div class="stat-block stat-consumers col-8 col-lg-5 bg-sector-{{ .clrscheme }}">
                     {{ end }}
-                        <p class="label text-sector-dark">{{ .name }}</p>
-                        <hr class="text-sector-dark">
-                        <p class="stat text-sector-dark"><span>{{ .size }}</span><span>{{ .measure }}</span></p>
+                        <p class="label text-sector-{{ .clrscheme }}">{{ .name }}</p>
+                        <hr class="text-sector-{{ .clrscheme }}">
+                        <p class="stat text-sector-{{ .clrscheme }}"><span>{{ .size }}</span><span>{{ .measure }}</span></p>
                     </div>
                     {{ end }}
                 </div>
