@@ -12,9 +12,9 @@
             {{$len := len .Params.investmentopportunity.offer }}    <!-- len .Params.investmentopportunity.offer -->
             {{range $index, $element := .Params.investmentopportunity.offer}}
             {{ if and (eq (add $index 1) $len ) (not (modBool (add $index 1) 2)) }}
-                 <div class="col-md-6 offset-md-6" len="{{ $len }}" index="{{ $index }}"> 
+                 <div class="col-md-6 offset-md-6" index="{{ $index }}"> 
               {{ else }}
-                 <div class="col-md-6" len="{{ $len }}" index="{{ $index }}">
+                 <div class="col-md-6" index="{{ $index }}">
               {{ end }}
   
                  <div class="opp-wrapper d-flex align-items-center">
