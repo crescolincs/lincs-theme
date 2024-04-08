@@ -39,10 +39,14 @@
        {{ partial "mainsectors/logogrid.html" . }}
     {{ end }}
 
+    {{ if .Params.articles.display }}
+       {{ partial "mainsectors/articles.html" . }}
+    {{ end }}
+
     {{ if .Params.CTA.display }}
        {{ partial "mainsectors/cta.html" . }}
     {{ end }}
-    
+
     {{ partial "prefooter.html" . }}
 
 </main>

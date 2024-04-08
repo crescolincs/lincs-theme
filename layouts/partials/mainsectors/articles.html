@@ -1,15 +1,16 @@
+{{$imagedomain := string .Site.Params.imagedomain }}
 <section class="section_articles-preview">
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <h2 class="h2-small text-dark-blue mb-4 text-center">Articles for Agrifood in Lincolnshire</h2>
+                <h2 class="h2-small text-dark-blue mb-4 text-center">{{ .Params.articles.heading }}</h2>
             </div>
         </div>
         <div class="row">
             <div class="col-12 col-lg-4 position-relative">
                 <div class="card shadow">
                     <div class="card-header">
-                        <img loading="lazy" src="/images/article-1.jpg" alt="">
+                        <img loading="lazy" src="{{ $imagedomain }}w_416/article-1.jpg" alt="">
                     </div>
                     <div class="card-body">
                         <p class="text-sector-mid"><small>Agrifood</small></p>
@@ -24,7 +25,7 @@
             <div class="col-12 col-lg-4 position-relative">
                 <div class="card shadow">
                     <div class="card-header">
-                        <img loading="lazy" src="/images/article-2.jpg" alt="">
+                        <img loading="lazy" src="{{ $imagedomain }}w_416/article-2.jpg" alt="">
                     </div>
                     <div class="card-body">
                         <p class="text-sector-mid"><small>Agrifood</small></p>
@@ -39,7 +40,7 @@
             <div class="col-12 col-lg-4 position-relative">
                 <div class="card shadow">
                     <div class="card-header">
-                        <img loading="lazy" src="/images/article-3.jpg" alt="">
+                        <img loading="lazy" src="{{ $imagedomain }}w_416/article-3.jpg" alt="">
                     </div>
                     <div class="card-body">
                         <p class="text-sector-mid"><small>Agrifood</small></p>
