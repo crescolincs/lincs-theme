@@ -11,7 +11,7 @@
           <div class="row xrow-cols-sm-1 xrow-cols-md-2">
             {{$len := len .Params.investmentopportunity.offer }}    <!-- len .Params.investmentopportunity.offer -->
             {{range $index, $element := .Params.investmentopportunity.offer}}
-              {{ if eq (add $index 1) $len  }}
+            {{ if and (eq (add $index 1) $len ) (not (modBool (add $index 1) 2)) }}
                  <div class="col-md-6 offset-md-6" len="{{ $len }}" index="{{ $index }}"> 
               {{ else }}
                  <div class="col-md-6" len="{{ $len }}" index="{{ $index }}">
