@@ -1,4 +1,4 @@
-<main id="main" class="page_home">
+<main id="main" class="page_home sector_{{ .Params.sector}}">
     {{ if .Params.hero.display }}
       {{ partial "hero.html" . }}
     {{ end }}
