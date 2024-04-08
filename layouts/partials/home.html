@@ -31,13 +31,18 @@
        {{ partial "mainsectors/offerfeatures.html" . }}
     {{ end }}
 
-    {{ if .Params.logos.display }}
+    {{ if .Params.support.display }}
+       {{ partial "mainsectors/support.html" . }}
+    {{ end }}
+
+    {{ if .Params.companylogos.display }}
        {{ partial "mainsectors/logogrid.html" . }}
     {{ end }}
 
     {{ if .Params.CTA.display }}
        {{ partial "mainsectors/cta.html" . }}
     {{ end }}
+    
     {{ partial "prefooter.html" . }}
 
 </main>
