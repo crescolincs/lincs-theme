@@ -15,30 +15,29 @@
                 <div class="download-block border-sector-dark position-relative d-flex justify-content-between">
                     <div class="content">
                         <h3 class="mt-0 mb-1 text-sector-dark">Find out more</h3>
-                        <p class="m-0 text-sector-mid">about the UK agrifood market opportunity</p>
+                        <p class="m-0 text-sector-mid">{{ .Params.marketopportunity.ctatext }}</p>
                     </div>
                     <div class="icon-wrapper mt-2">
                         <a class="full-card-click text-sector-mid" href="#get-data-form"><i class="fa-sharp fa-regular fa-arrow-down-long"></i></a>
                     </div>
                 </div>
             </div>
+
             <div class="col-12 col-lg-7 d-flex align-items-center mt-4 mt-lg-0">
                 <div class="row justify-content-center align-items-center stats-blocks">
-                    <div class="stat-block stat-consumers col-8 col-lg-5 bg-sector-light">
-                        <p class="label text-sector-dark">UK Consumers</p>
+
+                    {{$len := len .Params.marketopportunity.stats }}    <!-- len .Params.investmentopportunity.offer -->
+                    {{range $index, $element := .Params.marketopportunity.stats}}
+                    {{ if and (eq (add $index 1) $len ) (not (modBool (add $index 1) 2)) }}
+                    <div class="stat-block stat-consumers col-8 col-lg-6 offset-lg-3 bg-sector-{{ .clrscheme }}">
+                    {{ else}}
+                    <div class="stat-block stat-consumers col-8 col-lg-5 bg-sector-{{ .clrscheme }}">
+                    {{ end }}
+                        <p class="label text-sector-dark">{{ .name }}</p>
                         <hr class="text-sector-dark">
-                        <p class="stat text-sector-dark"><span>67.5</span><span>million</span></p>
+                        <p class="stat text-sector-dark"><span>{{ .size }}</span><span>{{ .measure }}</span></p>
                     </div>
-                    <div class="stat-block stat-value col-8 col-lg-5 bg-sector-mid">
-                        <p class="label text-white">UK Market Value</p>
-                        <hr class="text-white">
-                        <p class="stat text-white"><span>£254</span><span>billion P.A.</span></p>
-                    </div>
-                    <div class="stat-block stat-growth col-8 col-lg-5 bg-sector-dark">
-                        <p class="label text-white">UK Market Growth</p>
-                        <hr class="text-white">
-                        <p class="stat text-white"><span>+37%</span><span>2010-2019</span></p>
-                    </div>
+                    {{ end }}
                 </div>
             </div>
         </div>
