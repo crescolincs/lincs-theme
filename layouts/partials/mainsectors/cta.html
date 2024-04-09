@@ -6,7 +6,7 @@
                 <div class="img-wrapper pb-5">
                     <img loading="lazy" src="{{ $imagedomain }}{{ .Params.sectorCTA.image }}" alt="">
                 </div>
-                <h2 class="h2-large text-sector-light text-center">{{ .Params.sectorCTA.heading }}</h2>
+                <h2 class="h2-large text-sector-{{ .Params.sectorCTA.headingcolor }} text-center">{{ .Params.sectorCTA.heading }}</h2>
                 <p class="text-white text-center">{{ .Params.sectorCTA.lead }}</p>
 
                 <form class="d-flex flex-column align-items-center justify-content-center">
