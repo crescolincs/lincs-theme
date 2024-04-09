@@ -14,7 +14,7 @@
                         <style>main ul:not(.pagination) li::marker {content: "▷";font-family:system-ui;font-}</style>
                         <ul>
                             {{ range .Params.sectorCTA.brochurecontents}}
-                               <li class="{{ .Params.sectorCTA.contentscolour }}"">{{ .highlight }}</li>
+                               <li class="{{ .Params.sectorCTA.contentscolour }}">{{ .highlight }}</li>
                             {{ end }}
                         </ul>
 
