@@ -46,7 +46,8 @@
     {{ if .Params.CTA.display }}
        {{ partial "mainsectors/cta.html" . }}
     {{ end }}
-
-    {{ partial "prefooter.html" . }}
+    {{ if .Params.prefooterimage }}
+       {{ partial "prefooter.html" . }}
+    {{ end }}
 
 </main>
