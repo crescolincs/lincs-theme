@@ -1,10 +1,10 @@
 {{ $imagedomain := string .Site.Params.imagedomain }}
-<section class="section_get-data-form bg-sector-dark pt-5" id="get-data-form">
+<section class="section_get-data-form bg-sector-{{ .Params.sectorCTA.bgcolor }} pt-5" id="get-data-form">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-12 col-lg-8">
                 <div class="img-wrapper pb-5">
-                    <img loading="lazy" src="{{ $imagedomain }}{{ .Params.sectorCTA.image}}" alt="">
+                    <img loading="lazy" src="{{ $imagedomain }}{{ .Params.sectorCTA.image }}" alt="">
                 </div>
                 <h2 class="h2-large text-sector-light text-center">{{ .Params.sectorCTA.heading }}</h2>
                 <p class="text-white text-center">{{ .Params.sectorCTA.lead }}</p>
