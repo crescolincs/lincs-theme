@@ -50,7 +50,7 @@
     background: white;
   }
   ::-webkit-scrollbar-thumb:horizontal{
-          background: {{.Params.companylogos.scrollbarclr}};
+          background: {{ .Params.companylogos.scrollbarclr | safeCSS }};
   }
     #scroller1{max-width: 98%;grid-auto-columns: var(--hzd-eighth);grid-gap:3rem;}
 </style>
