@@ -1,24 +1,20 @@
+{{ $imagedomain := string .Site.Params.imagedomain }}
 <section class="section_get-data-form bg-sector-dark pt-5" id="get-data-form">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-12 col-lg-8">
                 <div class="img-wrapper pb-5">
-                    <img loading="lazy" src="/images/agrifood-brochure.png" alt="">
+                    <img loading="lazy" src="{{ $imagedomain }}{{ .Params.sectorCTA.image}}" alt="">
                 </div>
-                <h2 class="h2-large text-sector-light text-center">Get the Data on Lincolnshire as an Agrifood Business Location</h2>
-                <p class="text-white text-center">Lincolnshire’s agrifood sector Business Location Guide provides essential information and data for companies researching and evaluation Lincolnshire as a potential investment location, including:</p>
+                <h2 class="h2-large text-sector-light text-center">{{ .Params.sectorCTA.heading }}</h2>
+                <p class="text-white text-center">{{ .Params.sectorCTA.lead }}</p>
 
                 <form class="d-flex flex-column align-items-center justify-content-center">
                     <div class="form-content-wrapper d-lg-flex">
                         <ul>
-                            <li>The market opportunity</li>
-                            <li>Industry clusters</li>
-                            <li>Research &amp; technology</li>
-                            <li>Workforce, education &amp; skills</li>
-                            <li>Sites and properties</li>
-                            <li>UK and global market access</li>
-                            <li>Location &amp; sector data sets</li>
-                            <li>Support for investing businesses</li>
+                            {{ range .Params.sectorCTA.brochurecontents}}
+                            <li>{{ .highlight }}</li>
+
                         </ul>
 
                         <div class="fields">
@@ -54,7 +50,7 @@
                 <p class="text-white text-center mb-0">Interested in other sectors? <a class="other-brochures text-white" href="#">View our other brochures</a></p>
 
                 <div class="img-wrapper">
-                    <img src="/images/green-half-grad.png" alt="">
+                    <img src="{{ $imagedomain }}{{green-half-grad.png}}" alt="">
                 </div>
             </div>
         </div>

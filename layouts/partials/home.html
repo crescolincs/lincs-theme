@@ -43,9 +43,10 @@
        {{ partial "mainsectors/articles.html" . }}
     {{ end }}
 
-    {{ if .Params.CTA.display }}
+    {{ if .Params.sectorCTA.display }}
        {{ partial "mainsectors/cta.html" . }}
     {{ end }}
+    
     {{ if .Params.prefooterimage }}
        {{ partial "prefooter.html" . }}
     {{ end }}
