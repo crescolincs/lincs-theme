@@ -46,6 +46,12 @@
       margin: 1rem auto 1rem auto;
       cursor: grabbing;  
   }
+  ::-webkit-scrollbar{
+    background: white;
+  }
+  ::-webkit-scrollbar-thumb:horizontal{
+          background: {{.Params.companylogos.scrollbarclr}};
+  }
     #scroller1{max-width: 98%;grid-auto-columns: var(--hzd-eighth);grid-gap:3rem;}
 </style>
 <div class="hzcontainer">
