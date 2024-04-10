@@ -47,6 +47,7 @@
         background: hsl(66, 15%, 87%);
         xxxborder:1px solid #a1887f;
 }
+#scroller1{max-width: 98%;grid-auto-columns: var(--hzd-eighth);grid-gap:3rem;}
 /* arrow stuff */
 .arrows{ margin: 0 auto; width: max-content; }
 .arrow{ color: #499980; font-size: 4rem; line-height: 1rem; cursor:pointer; display:inline-block; }
@@ -54,6 +55,7 @@
 .arrows img, arrows svg{max-width: 3rem; cursor: pointer;}
 .arrows svg:hover{fill:green; cursor:pointer; }
 </style>
+<script src="js/es-hzd.js"></script>
 <section class="section_logo-grid">
     <div class="hzwrapper">
         <div class="row">
@@ -80,9 +82,7 @@
 <!--  </div> -->
     </div>
 <script>
-  var HoriZontaDelic=function(){"use strict";var h={clicked:0,scrollbehaviour:"smooth",gap:0,clickuptarget:0,clickdowntarget:0,init:function(t){var e=this;this.addEvent("resize",window,function(i){e.setSizes()}),t&&t.arrowkeys&&this.addEvent("keydown",window,function(i){e.setKeys(i)}),t&&t.id&&(this.hzdscroller=document.getElementById(t.id)),this.hzdscroller||(this.isIE||this.isFirefox?this.hzdscroller=document.documentElement:this.hzdscroller=document.body),t&&t.gap?this.gap=t.gap:this.gap=0,this.setSizes(),t&&t.prev&&(this.prev=document.getElementById(t.prev),this.addEvent("click",this.prev,function(i){e.clickDown(i)})),t&&t.next&&(this.next=document.getElementById(t.next),this.addEvent("click",this.next,function(i){e.clickUp(i)}))},addEvent:function(t,e,i){e.addEventListener?e.addEventListener(t,i,!1):e.attachEvent?e.attachEvent("on"+t,i):e[t]=i},getjumpsteps:function(t,e){var i=Math.trunc(t/e),s=i*e,c=Array(s/e).fill(0).map((r,l)=>l*e+e);return s<t&&c.push(t),c},setSizes:function(t){this.imagewidth=this.hzdscroller.children[0].clientWidth+this.gap,this.fullimagesinview=Math.trunc(this.hzdscroller.clientWidth/this.imagewidth),this.totalimages=this.hzdscroller.children.length,this.jumpsteps=this.getjumpsteps(this.totalimages,this.fullimagesinview)},setKeys:function(t){switch(t.key){case"ArrowRight":this.clickUp();break;case"ArrowDown":this.clicked=this.maxjumps,this.clickUp();break;case"ArrowLeft":this.clickDown();break;case"ArrowUp":this.clicked=this.jumpsize*-1,this.clickDown();break}},cancelEvent:function(t){t||(t=window.event),t.target&&t.target.nodeName==="IMG"?t.preventDefault():t.srcElement&&t.srcElement.nodeName==="IMG"&&(t.returnValue=!1)},clickDown:function(t){this.clicked--,this.clickdowntarget=this.jumpsteps[this.clicked]-1,this.jumpsteps[this.clicked]===void 0?(this.hzdscroller.children[0].scrollIntoView({behavior:"smooth"}),this.clicked=0):this.hzdscroller.children[this.jumpsteps[this.clicked]-1].scrollIntoView({behavior:"smooth"})},clickUp:function(t){this.clicked++,this.clickuptarget=this.jumpsteps[this.clicked]-1,this.jumpsteps[this.clicked]===void 0?this.hzdscroller.children[this.hzdscroller.children.length-1].scrollIntoView({behavior:"smooth"}):this.hzdscroller.children[this.jumpsteps[this.clicked]-1].scrollIntoView({behavior:"smooth"})}};return h};
-
-  var hzd1 = new HoriZontaDelic();
+   var hzd1 = new HoriZontaDelic();
    hzd1.init({
         id: 'scroller1',
         prev: 'prev1',
