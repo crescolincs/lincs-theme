@@ -26,6 +26,7 @@
 .hzwrapper img {
     width: 100%;
     padding: 1rem;
+    min-width:290px;
 }
 .hzwrapper > .scroller {
     display: grid;
@@ -47,7 +48,7 @@
         background: hsl(66, 15%, 87%);
         xxxborder:1px solid #a1887f;
 }
-#scroller1{max-width: 98%;grid-auto-columns: var(--hzd-eighth);grid-gap:3rem;}
+#scroller1{max-width: 98%;grid-auto-columns: 290px;grid-gap:3rem;}
 /* arrow stuff */
 .arrows{ margin: 0 auto; width: max-content; }
 .arrow{ color: #499980; font-size: 4rem; line-height: 1rem; cursor:pointer; display:inline-block; }
@@ -57,7 +58,7 @@
 </style>
 <script src="js/es-hzd.js"></script>
 <section class="section_logo-grid">
-    <div class="hzwrapper">
+    <div class="container hzwrapper">
         <div class="row">
             <div class="col-12">
                 <h2 class="h2-small text-dark-blue text-center">{{ .Params.companylogos.heading }}</h2>
