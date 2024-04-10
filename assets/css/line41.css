@@ -1,4 +1,5 @@
-*/:host,
+/* Ally's combined custom styles */
+:host,
 :root {
 	--fa-style-family-sharp: "Font Awesome 6 Sharp";
 	--fa-font-sharp-regular: normal 400 1em/1 "Font Awesome 6 Sharp"
