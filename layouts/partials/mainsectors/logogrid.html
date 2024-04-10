@@ -54,6 +54,12 @@
           background: {{ .Params.companylogos.scrollbarclr | safeCSS }};
   }
     #scroller1{max-width: 98%;grid-auto-columns: var(--hzd-eighth);grid-gap:3rem;}
+  /* arrow stuff */
+  .arrows{ margin: 0 auto; width: max-content; }
+  .arrow{ color: #499980; font-size: 4rem; line-height: 1rem; cursor:pointer; display:inline-block; }
+  .arrows svg{ width: 3rem; height: 3rem; padding:0 1.5rem; }
+  .arrows img, arrows svg{max-width: 3rem; cursor: pointer;}
+  .arrows svg:hover{fill:green; cursor:pointer; }
 </style>
 <div class="hzcontainer">
          <div class="scroller hidescrollbar" id="scroller1">
@@ -61,6 +67,25 @@
              <img src="{{ $imagedomain }}w_290/{{.logo }}" alt="{{ .name }}">
              {{ end }}
          </div>
+         <div class="arrows">
+          <svg id="prev1" fill="#000000" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+            <path d="M16 0c-8.837 0-16 7.163-16 16s7.163 16 16 16c8.837 0 16-7.163 16-16s-7.163-16-16-16zM16 30.032c-7.72 0-14-6.312-14-14.032s6.28-14 14-14 14 6.28 14 14-6.28 14.032-14 14.032zM23.010 14.989h-11.264l3.617-3.617c0.39-0.39 0.39-1.024 0-1.414s-1.024-0.39-1.414 0l-5.907 6.062 5.907 6.063c0.195 0.195 0.451 0.293 0.707 0.293s0.511-0.098 0.707-0.293c0.39-0.39 0.39-1.023 0-1.414l-3.68-3.68h11.327c0.552 0 1-0.448 1-1s-0.448-1-1-1z"></path>
+        </svg>
+        <svg id="next1" fill="#000000" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+          <path d="M16 0c-8.836 0-16 7.163-16 16s7.163 16 16 16c8.837 0 16-7.163 16-16s-7.163-16-16-16zM16 30.032c-7.72 0-14-6.312-14-14.032s6.28-14 14-14 14 6.28 14 14-6.28 14.032-14 14.032zM16.637 9.957c-0.39 0.39-0.39 1.024 0 1.414l3.617 3.617h-11.264c-0.553 0-1 0.448-1 1s0.447 1 1 1h11.327l-3.68 3.68c-0.39 0.39-0.39 1.023 0 1.414 0.195 0.195 0.451 0.293 0.707 0.293s0.512-0.098 0.707-0.293l5.907-6.063-5.907-6.063c-0.391-0.39-1.023-0.39-1.415 0z"></path>
+        </svg>
+        </div>
   </div>
     </div>
+<script>
+  var HoriZontaDelic=function(){"use strict";var h={clicked:0,scrollbehaviour:"smooth",gap:0,clickuptarget:0,clickdowntarget:0,init:function(t){var e=this;this.addEvent("resize",window,function(i){e.setSizes()}),t&&t.arrowkeys&&this.addEvent("keydown",window,function(i){e.setKeys(i)}),t&&t.id&&(this.hzdscroller=document.getElementById(t.id)),this.hzdscroller||(this.isIE||this.isFirefox?this.hzdscroller=document.documentElement:this.hzdscroller=document.body),t&&t.gap?this.gap=t.gap:this.gap=0,this.setSizes(),t&&t.prev&&(this.prev=document.getElementById(t.prev),this.addEvent("click",this.prev,function(i){e.clickDown(i)})),t&&t.next&&(this.next=document.getElementById(t.next),this.addEvent("click",this.next,function(i){e.clickUp(i)}))},addEvent:function(t,e,i){e.addEventListener?e.addEventListener(t,i,!1):e.attachEvent?e.attachEvent("on"+t,i):e[t]=i},getjumpsteps:function(t,e){var i=Math.trunc(t/e),s=i*e,c=Array(s/e).fill(0).map((r,l)=>l*e+e);return s<t&&c.push(t),c},setSizes:function(t){this.imagewidth=this.hzdscroller.children[0].clientWidth+this.gap,this.fullimagesinview=Math.trunc(this.hzdscroller.clientWidth/this.imagewidth),this.totalimages=this.hzdscroller.children.length,this.jumpsteps=this.getjumpsteps(this.totalimages,this.fullimagesinview)},setKeys:function(t){switch(t.key){case"ArrowRight":this.clickUp();break;case"ArrowDown":this.clicked=this.maxjumps,this.clickUp();break;case"ArrowLeft":this.clickDown();break;case"ArrowUp":this.clicked=this.jumpsize*-1,this.clickDown();break}},cancelEvent:function(t){t||(t=window.event),t.target&&t.target.nodeName==="IMG"?t.preventDefault():t.srcElement&&t.srcElement.nodeName==="IMG"&&(t.returnValue=!1)},clickDown:function(t){this.clicked--,this.clickdowntarget=this.jumpsteps[this.clicked]-1,this.jumpsteps[this.clicked]===void 0?(this.hzdscroller.children[0].scrollIntoView({behavior:"smooth"}),this.clicked=0):this.hzdscroller.children[this.jumpsteps[this.clicked]-1].scrollIntoView({behavior:"smooth"})},clickUp:function(t){this.clicked++,this.clickuptarget=this.jumpsteps[this.clicked]-1,this.jumpsteps[this.clicked]===void 0?this.hzdscroller.children[this.hzdscroller.children.length-1].scrollIntoView({behavior:"smooth"}):this.hzdscroller.children[this.jumpsteps[this.clicked]-1].scrollIntoView({behavior:"smooth"})}};return h};
+
+  var hzd1 = new HoriZontaDelic();
+   hzd1.init({
+        id: 'scroller1',
+        prev: 'prev1',
+        next: 'next1',
+        gap: 0
+     })
+</script>
 </section>
