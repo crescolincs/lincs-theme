@@ -1,29 +1,27 @@
 {{ $imagedomain := string .Site.Params.imagedomain }}
 {{ $licolour := string .Params.sectorCTA.contentscolour }}
-<section class="section_get-data-form bg-sector-{{ .Params.sectorCTA.bgcolor }} pt-5" id="get-data-form">
+<section class="section_get-data-form bg-sector-dark" id="get-data-form">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-12 col-lg-8">
                 <h2 class="h2-large text-sector-{{ .Params.sectorCTA.headingcolor }} text-center">{{ .Params.sectorCTA.heading }}</h2>
                 <p class="{{ .Params.sectorCTA.contentscolour }} text-center">{{ .Params.sectorCTA.lead }}</p>
-        </div>
-                <div class="col-12 col-lg-12">
-                    <form class="d-flex flex-column align-items-center justify-content-center">
-
+            </div>
+            <div class="col-12 col-lg-12">
+                <form class="d-flex flex-column align-items-center justify-content-center">
                     <div class="form-content-wrapper d-lg-flex">
                         <div class="col-12 col-lg-4 d-flex d-lg-block justify-content-center">
-                            <style>main ul:not(.pagination) li::marker {content: "▷";font-family:system-ui;font-}</style>
+                            <style>main ul:not(.pagination) li::marker {content: "▷";font-family:system-ui;}</style>
                             <ul>
                                 {{ range .Params.sectorCTA.brochurecontents}}
                                    <li class="{{ $licolour }}">{{ .highlight }}</li>
                                 {{ end }}
                             </ul>
                         </div>
-                    
                         <div class="col-12 col-lg-4">
                             <div class="fields">
                                 <div class="field-wrapper">
-                                    <!--<label for="full-name">Name</label>-->
+                                    <!-- <label for="full-name">Name</label>-->
                                     <input type="text" id="full-name" name="full-name" required="" placeholder="Name">
                                 </div>
                                 <div class="field-wrapper">
@@ -39,25 +37,20 @@
                                 </div>
                             </div>
                         </div>
-                    
                         <div class="col-12 col-lg-4 d-flex align-items-center">
                             <div class="img-wrapper">
-                                <img loading="lazy" src="{ $imagedomain }}{{ .Params.sectorCTA.image }}" alt="">
+                                <img loading="lazy" src="{{ $imagedomain }}{{ .Params.sectorCTA.image }}" alt="">
                             </div>
                         </div>
                     </div>
-
-                    <div class="field-wrapper">
+                    <div class="field-wrapper d-flex flex-column align-items-center">
                         <button class="btn btn-submit" type="submit">Submit to Download<i class="fa-sharp fa-regular fa-arrow-right ms-4"></i></button>
-                        <!-- <button class="btn btn-submit" type="button" disabled="">
-                            Submit
-                            <span class="spinner-border spinner-border-sm ms-5" aria-hidden="true"></span>
-                        </button>
-                        <button class="btn btn-submit" type="button">Download<i class="fa-sharp fa-regular fa-arrow-down-to-bracket ms-3"></i></button> -->
                     </div>
 
                 </form>
-             </div>
+
+               
+
                 <div class="img-wrapper">
                     <img src="{{ $imagedomain }}{{ .Params.sectorCTA.footerimg }}" alt="">
                 </div>
