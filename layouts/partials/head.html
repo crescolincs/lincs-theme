@@ -21,7 +21,7 @@
     <meta property="twitter:description" content="{{ .Params.seoDescription }}">
     <meta property="twitter:image" content="{{ .Site.Params.imagedomain }}{{ .Params.socialImage }}">
      {{ partial "head/css.html" . }}
-     {{ with .Params.ctaarrowclr }}
+     {{ if ne (.Params.ctaarrowclr) "" }}
      <style>svg.svgdownarrow{fill:{{.Params.ctaarrowclr |safeCSS }}} .download-block:hover svg.svgdownarrow{margin-bottom:-8px;}</style>
      {{ end}}
 
