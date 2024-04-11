@@ -22,7 +22,7 @@
     <meta property="twitter:image" content="{{ .Site.Params.imagedomain }}{{ .Params.socialImage }}">
      {{ partial "head/css.html" . }}
      {{ if ne (.Params.ctaarrowclr) "" }}
-     <style>svg.svgdownarrow{fill:{{.Params.ctaarrowclr |safeCSS }};transition: 0.3s;} .download-block:hover svg.svgdownarrow{margin-bottom:-8px;}</style>
+     <style>.border-sector-dark svg.svgdownarrow{fill:{{.Params.ctaarrowclrdark |safeCSS }};transition: 0.3s;} .border-sector-light svg.svgdownarrow{fill:{{.Params.ctaarrowclrlight |safeCSS }};} .download-block:hover svg.svgdownarrow{margin-bottom:-8px;}</style>
      {{ end}}
 
 
