@@ -10,8 +10,8 @@
                         <p>{{ .Params.entrancelocationmap.text }}</p>
                     </div>
 
-                    <div class="img-wrapper">
-                        <img loading="lazy" src="{{ .Site.Params.imagedomain }}w_535,h_472,c_fit/{{ .Params.entrancelocationmap.image }}" alt="A map of Great Britain showing Lincolnshire's location in relation to the ret of the country.">
+                    <div class="img-wrapper"> <!-- w_535,h_472,c_fit/ -->
+                        <img loading="lazy" src="{{ .Site.Params.imagedomain }}{{ .Params.entrancelocationmap.image }}" alt="A map of Great Britain showing Lincolnshire's location in relation to the ret of the country.">
                     </div>
                 </div>
 
