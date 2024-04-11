@@ -10,51 +10,51 @@
   --hzd-eighth: 12.5%;
   --hzd-tenth:10%;
 }
-.hzwrapper{
-  margin-inline: auto;
-  /*max-width: max(80rem,var(--hzdcontainerwidth));
-  overflow-y: auto;*/
-   
+#ezpzwrap{
+  border: 1px solid #ccc;
+  overflow-x: scroll;
+  scrollbar-color: #fff #fff;
+  scrollbar-width: 0;
+  max-width: 1310px;
+  border: none;
+  margin: 0 auto;
 }
-.hzcontainer{
+#ezpzcontent {
   display: grid;
-  grid-template-columns: 1fr var(--imagewidthmed) 1fr; 
+  max-width: 100%;
   grid-auto-flow: column;
-  grid-gap: 12px;
-  max-width: calc(50px+var(--imagewidthmed)+50px);
-}
-.hzwrapper img {
-    width: 100%;
-    padding: 1rem;
-    min-width:290px;
-}
-.hzwrapper > .scroller {
-    display: grid;
-    grid-auto-columns: var(--imagewidthmed);
-    grid-auto-flow: column;
-    grid-gap: 8px;
-    overflow-x: auto;
-    scrollbar-color: #fff #fff; /* yellow #000;  #499980 
-    max-width: 100%;*/
-    margin: 4rem auto 1rem auto;
-    cursor: grabbing;  
+  grid-auto-columns: 290px;
+  grid-gap: 3rem;
 }
 
-::-webkit-scrollbar{
-  xheight: 0.5rem;
-  background: white;
+#content img {
+  max-width: 250px;
+  padding: 1rem 0;
 }
-::-webkit-scrollbar-thumb:horizontal{
-        background: hsl(66, 15%, 87%);
-        xxxborder:1px solid #a1887f;
+.arrows {
+  margin: 1rem auto;
+  width: max-content;
 }
-#scroller1{max-width: 98%;grid-auto-columns: 290px;grid-gap:3rem;}
-/* arrow stuff */
-.arrows{ margin: 0 auto; width: max-content; }
-.arrow{ color: #499980; font-size: 4rem; line-height: 1rem; cursor:pointer; display:inline-block; }
-.arrows svg{ height: 3rem; padding:0 1.5rem; }/* width: 3rem; */
-.arrows img, arrows svg{max-width: 3rem; cursor: pointer;}
-.arrows svg:hover{fill:green; cursor:pointer; }
+.arrow {
+  color: #499980;
+  font-size: 4rem;
+  line-height: 1rem;
+  cursor: pointer;
+  display: inline-block;
+}
+.arrows svg {
+  height: 1.5rem;
+  padding: 0 1rem;
+}
+.arrows img,
+arrows svg {
+  max-width: 3rem;
+  cursor: pointer;
+}
+.arrows svg:hover {
+  fill: green;
+  cursor: pointer;
+}
 </style>
 <script src="js/ezpzslider.js"></script>
 <section class="section_logo-grid">
@@ -66,12 +66,13 @@
             </div>
         </div>
 
-<!-- <div class="hzcontainer"> -->
-         <div class="scroller hidescrollbar" id="scroller1">
+<div id="ezpzwrap">
+         <div class="scroller hidescrollbar" id="ezpzcontent">
             {{ range .Params.companylogos.companies }}
              <img src="{{ $imagedomain }}w_290/{{.logo }}" alt="{{ .name }}">
              {{ end }}
          </div>
+        </div>
          <div class="arrows">
           <svg id="prev" fill="#000000" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
             <path d="M16 0c-8.837 0-16 7.163-16 16s7.163 16 16 16c8.837 0 16-7.163 16-16s-7.163-16-16-16zM16 30.032c-7.72 0-14-6.312-14-14.032s6.28-14 14-14 14 6.28 14 14-6.28 14.032-14 14.032zM23.010 14.989h-11.264l3.617-3.617c0.39-0.39 0.39-1.024 0-1.414s-1.024-0.39-1.414 0l-5.907 6.062 5.907 6.063c0.195 0.195 0.451 0.293 0.707 0.293s0.511-0.098 0.707-0.293c0.39-0.39 0.39-1.023 0-1.414l-3.68-3.68h11.327c0.552 0 1-0.448 1-1s-0.448-1-1-1z"></path>
@@ -80,7 +81,6 @@
           <path d="M16 0c-8.836 0-16 7.163-16 16s7.163 16 16 16c8.837 0 16-7.163 16-16s-7.163-16-16-16zM16 30.032c-7.72 0-14-6.312-14-14.032s6.28-14 14-14 14 6.28 14 14-6.28 14.032-14 14.032zM16.637 9.957c-0.39 0.39-0.39 1.024 0 1.414l3.617 3.617h-11.264c-0.553 0-1 0.448-1 1s0.447 1 1 1h11.327l-3.68 3.68c-0.39 0.39-0.39 1.023 0 1.414 0.195 0.195 0.451 0.293 0.707 0.293s0.512-0.098 0.707-0.293l5.907-6.063-5.907-6.063c-0.391-0.39-1.023-0.39-1.415 0z"></path>
         </svg>
         </div>
-<!--  </div> -->
     </div>
 
 </section>
