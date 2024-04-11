@@ -4,13 +4,11 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-12 col-lg-8">
-                <div class="img-wrapper pb-5">
-                    <img loading="lazy" src="{{ $imagedomain }}{{ .Params.sectorCTA.image }}" alt="">
-                </div>
                 <h2 class="h2-large text-sector-{{ .Params.sectorCTA.headingcolor }} text-center">{{ .Params.sectorCTA.heading }}</h2>
                 <p class="{{ .Params.sectorCTA.contentscolour }} text-center">{{ .Params.sectorCTA.lead }}</p>
-
-                <form class="d-flex flex-column align-items-center justify-content-center">
+        </div>
+                <div class="col-12 col-lg-12">
+                    <form class="d-flex flex-column align-items-center justify-content-center">
 
                     <div class="form-content-wrapper d-lg-flex">
                         <div class="col-12 col-lg-4 d-flex d-lg-block justify-content-center">
@@ -59,9 +57,7 @@
                     </div>
 
                 </form>
-
-                <p class="text-white text-center mb-0">Interested in other sectors? <a class="other-brochures text-white" href="#">View our other brochures</a></p>
-
+             </div>
                 <div class="img-wrapper">
                     <img src="{{ $imagedomain }}{{ .Params.sectorCTA.footerimg }}" alt="">
                 </div>
