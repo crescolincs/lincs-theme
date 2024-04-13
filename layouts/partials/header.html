@@ -21,11 +21,9 @@
                             Growth Sectors
                         </a>
                         <div class="dropdown-menu" id="sector-dropdown">
-                            <a class="dropdown-item" href="#">Advanced Engineering &amp; Manufacturing</a>
-                            <a class="dropdown-item" href="#">Agrifood</a>
-                            <a class="dropdown-item" href="#">Defence &amp; Security</a>
-                            <a class="dropdown-item" href="#">Logistics</a>
-
+                            {{ range $.Site.Data.growthsectors.sectors }}
+                            <a class="dropdown-item" href="{{ .link }}">{{ .text }}</a>
+                            {{ end }}
                         </div>
                     </li>
                     <!-- -->
