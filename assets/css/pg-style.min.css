@@ -10923,6 +10923,25 @@ a.full-card-click:after {
   fill: #4cbab6
 }
 
+.sector_visitor-economy .border-sector-light svg.svgdownarrow {
+  fill: #dd898e;
+  transition: .3s
+}
+
+.sector_visitor-economy .border-sector-mid svg.svgdownarrow {
+  fill: #cf4952;
+  transition: .3s
+}
+
+.sector_visitor-economy .border-sector-dark svg.svgdownarrow {
+  fill: #80244e;
+  transition: .3s
+}
+
+.sector_visitor-economy .btn-submit:hover svg {
+  fill: #80244e
+}
+
 .download-block:hover svg.svgdownarrow {
   margin-bottom: -8px
 }
@@ -10936,6 +10955,8 @@ a.full-card-click:after {
 .section_get-data-form form .form-content-wrapper ul {
   width: fit-content
 }
+
+
 
 .section_get-data-form form .form-content-wrapper ul li {
   font-weight: 700;
