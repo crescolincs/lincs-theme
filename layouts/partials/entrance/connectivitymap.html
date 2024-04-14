@@ -1,0 +1,27 @@
+{{$imagedomain := string .Site.Params.imagedomain }}
+<section class="section_connectivity-map">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-lg-10">
+                <h2 class="h2-large text-dark-blue text-center">{{ .Params.connectivitymap.heading }}</h2>
+
+                <div class="map-wrapper">
+                    <img src="/images/connect-map.png" alt="">
+                </div>
+
+                <div class="key-wrapper d-lg-flex align-items-center justify-content-around">
+                    <h3 class="text-red text-uppercase mt-0 mt-lg-4">{{ .Params.connectivitymap.keyheading }}</h3>
+                    {{ range .Params.connectivitymap.keyitems }}
+                    <div class="key-item d-flex align-items-center mb-4">
+                        <div class="icon-wrapper me-4">
+                            <img src="{{  }}{{ .icon }}" alt="">
+                        </div>
+                        <p class="text-dark-blue fw-bold">{{ .title}}</p>
+                    </div>
+                    {{ end }}
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

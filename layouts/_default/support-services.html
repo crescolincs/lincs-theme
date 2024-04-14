@@ -1,3 +1,15 @@
 {{ define "main" }}
-SUPPORT SERVICES
+{{ if .Params.hero.display }}
+   {{ partial "hero.html" . }}
+{{ end }}
+{{ if .Params.offerfeatures.display }}
+   {{ partial "mainsectors/offerfeatures.html" . }}
+{{ end }}
+{{ if .Params.supportservices.display }}
+   {{ partial "entrance/supportservices.html" . }}
+{{ end }}
+{{ if .Params.sectorCTA.display }}
+   {{ partial "mainsectors/cta.html" . }}
+{{ end }}
+
 {{ end }}

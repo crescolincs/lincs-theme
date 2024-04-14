@@ -1,3 +1,20 @@
 {{ define "main" }}
-   {{ partial "home.html" . }}  
+    {{ if .Params.hero.display }}
+       {{ partial "hero.html" . }}
+    {{ end }}
+    {{ if .Params.investmentopportunity.display }}
+       {{ partial "mainsectors/investmentopportunity.html" . }}
+    {{ end }}
+    {{ if .Params.offerfeatures.display }}
+       {{ partial "mainsectors/offerfeatures.html" . }}
+    {{ end }}
+    {{ if .Params.articles.display }}
+       {{ partial "mainsectors/articles.html" . }}
+    {{ end }}
+    {{ with site.GetPage "home" }}
+        {{ partial "entrance/growthsectors.html" . }}
+    {{ end }}
+    {{ if .Params.sectorCTA.display }}
+       {{ partial "mainsectors/cta.html" . }}
+    {{ end }}    
 {{ end }}

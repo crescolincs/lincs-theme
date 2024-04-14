@@ -1,3 +1,23 @@
 {{ define "main" }}
-LOCATION AND CONNECTIVITY
+   {{ if .Params.hero.display }}
+      {{ partial "hero.html" . }}
+   {{ end }}
+   {{ if .Params.connectivitymap.display }}
+      {{ partial "entrance/connectivitymap.html" . }}
+   {{ end }}
+   {{ if .Params.hgvdrivetimesmap.display }}
+      {{ partial "entrance/hgvdrivetimesmap.html" . }}
+   {{ end }}
+   {{ if .Params.multimodal.display }}
+      {{ partial "entrance/multimodal.html" . }}
+   {{ end }}
+   {{ if .Params.articles.display }}
+      {{ partial "mainsectors/articles.html" . }}
+   {{ end }}
+   {{ with site.GetPage "home" }}
+       {{ partial "entrance/growthsectors.html" . }}
+   {{ end }}
+   {{ if .Params.sectorCTA.display }}
+       {{ partial "mainsectors/cta.html" . }}
+   {{ end }}  
 {{ end }}
