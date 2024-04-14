@@ -1,5 +1,7 @@
 {{ define "main" }}
+IN MAIN
     {{ if .Params.hero.display }}
+    IN HERO
        {{ partial "hero.html" . }}
     {{ end }}
     {{ if .Params.investmentopportunity.display }}
