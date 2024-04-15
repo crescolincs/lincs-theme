@@ -10478,7 +10478,7 @@ a.full-card-click:after {
   color: #e75a13
 }
 
-.sector_logistics .text-sector-dark {
+.sector_logistics .text-sector-dark, .sector_logistics .text-sector-dark p:first-of-type  {
   color: #af0000
 }
 
