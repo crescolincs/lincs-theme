@@ -4,7 +4,7 @@
         <div class="row">
             <div class="col-12 col-lg-5 pe-3 pe-lg-0">
                 <h2 class="h2-small text-sector-mid">{{ .Params.marketopportunity.heading }}</h2>
-                <p class="lead-text text-sector-dark">{{ .Params.marketopportunity.lead }}</p>
+                <p class="lead-text text-sector-dark">{{ .Params.marketopportunity.lead | markdownify}}</p>
 
                 <ul>
                     {{range .Params.marketopportunity.benefits }}
