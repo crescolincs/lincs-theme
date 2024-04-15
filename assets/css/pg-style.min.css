@@ -10309,6 +10309,8 @@ a.full-card-click:after {
 
 /* sector css START */
 
+.contact-block:hover svg.svgrightarrow {margin-right: -8px; transition: 0.3s;}
+
 .sector_location-connectivity .btn-submit,.sector_support-services .btn-submit{
   background-color: #fff!important;
   color: #1c1434!important
