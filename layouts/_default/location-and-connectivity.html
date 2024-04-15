@@ -1,4 +1,5 @@
 {{ define "main" }}
+<main id="main" class="sector_{{ .Params.sector}}">
    {{ if .Params.hero.display }}
       {{ partial "hero.html" . }}
    {{ end }}
@@ -19,5 +20,6 @@
    {{ end }}
    {{ if .Params.sectorCTA.display }}
        {{ partial "mainsectors/cta.html" . }}
-   {{ end }}  
+   {{ end }} 
+</main>
 {{ end }}

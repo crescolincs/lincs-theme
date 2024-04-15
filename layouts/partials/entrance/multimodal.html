@@ -1,47 +1,18 @@
 {{$imagedomain := string .Site.Params.imagedomain }}
+<div class="container">
 <div class="row">
+    {{ range .Params.multimodal.modality}}
     <div class="col-12 col-lg-6 mb-3 mb-lg-5">
         <div class="content-wrapper px-3 px-lg-4 d-flex">
             <div class="icon-wrapper d-flex justify-content-center">
-                <img src="/images/truck-icon.svg" alt="">
+                <img src="{{$imagedomain}}{{ .icon }}" alt="">
             </div>
             <div class="text-wrapper ps-4 ps-lg-5">
-                <h4 class="mt-0">By road</h4>
-                <p>From Lincolnshire, the major conurbations of the Midlands and North of England can be reached within 2 ½ hours, and London within 2 ¾ hours. More than 75% of the UK’s population can be reached within around 3 ½ hours’ drive time.</p>
+                <h4 class="mt-0">{{ .by }}</h4>
+                <p>{{ .text }}</p>
             </div>
         </div>
     </div>
-    <div class="col-12 col-lg-6 mb-3 mb-lg-5">
-        <div class="content-wrapper px-3 px-lg-4 d-flex">
-            <div class="icon-wrapper d-flex justify-content-center">
-                <img src="/images/train-icon.svg" alt="">
-            </div>
-            <div class="text-wrapper ps-4 ps-lg-5">
-                <h4 class="mt-0">By rail</h4>
-                <p>The UK’s major cities are easily accessible by rail from Lincolnshire. From Lincoln, London can be reached within 2 hours, and Manchester within 2 1/4 hours. From Grantham, in the south of the region, London can be reached in just over 1 hour.</p>
-            </div>
-        </div>
-    </div>
-    <div class="col-12 col-lg-6 mb-3 mb-lg-5">
-        <div class="content-wrapper px-3 px-lg-4 d-flex">
-            <div class="icon-wrapper d-flex justify-content-center">
-                <img src="/images/plane-icon.svg" alt="">
-            </div>
-            <div class="text-wrapper ps-4 ps-lg-5">
-                <h4 class="mt-0">By air</h4>
-                <p>Within Lincolnshire, Humberside Airport offers frequent ‘hub-feeder’ services to Amsterdam Schiphol (AMS), with connections to 800 global destinations with KLM and SkyTeam partners. Airports accessible within 2 hours’ drive time include Birmingham, East Midlands, and Leeds-Bradford.</p>
-            </div>
-        </div>
-    </div>
-    <div class="col-12 col-lg-6 mb-3 mb-lg-5">
-        <div class="content-wrapper px-3 px-lg-4 d-flex">
-            <div class="icon-wrapper d-flex justify-content-center">
-                <img src="/images/ship-icon.svg" alt="">
-            </div>
-            <div class="text-wrapper ps-4 ps-lg-5">
-                <h4 class="mt-0">By sea</h4>
-                <p>The ports of Immingham and Grimsby are the UK’s largest by tonnage, offering deep water facilities, frequent lo-lo (container) and ro-ro services to European ports, and deep-sea feeder services for global market access. The Port of Boston serves UK destinations for containers and bulk foods.</p>
-            </div>
-        </div>
-    </div>
+   {{ end }}
+</div>
 </div>
