@@ -10336,7 +10336,7 @@ a.full-card-click:after {
   color: #27357e
 }
 
-.sector_advanced-engineering-manufacturing .text-sector-dark {
+.sector_advanced-engineering-manufacturing .text-sector-dark, .sector_support-services .text-sector-dark {
   color: #252159
 }
 
@@ -10360,7 +10360,7 @@ a.full-card-click:after {
   border: .1875rem solid #27357e
 }
 
-.sector_advanced-engineering-manufacturing .border-sector-dark {
+.sector_advanced-engineering-manufacturing .border-sector-dark, .sector_support-services .border-sector-dark {
   border: .1875rem solid #252159
 }
 
