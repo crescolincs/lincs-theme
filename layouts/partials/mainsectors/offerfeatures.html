@@ -1,15 +1,25 @@
 {{$imagedomain := string .Site.Params.imagedomain }}
-{{range .Params.offerfeatures.features }}
+
+{{$len := len .Params.offerfeatures.features }}    <!-- len .Params.investmentopportunity.offer -->
+{{range $index, $element := .Params.offerfeatures.features}}
 <section class="section_50-50-image-content-download mb-5">
     <div class="container">
         
         <div class="row">
-            <div class="col-12 col-lg-6 order-lg-1 mb-4 mb-lg-0">
+            {{ if not (modBool (add $index 1) 2) }}
+            <div class="col-12 col-lg-6 order-lg-1 mb-4 mb-lg-0">          
+            {{ else }}
+            <div class="col-12 col-lg-6 offset-lg-1 order-lg-2 mb-4 mb-lg-0"> 
+            {{ end }}
                 <div class="img-wrapper">
                     <img loading="lazy" src="{{ $imagedomain }}w_636/{{ .image }}" alt="">
                 </div>
             </div>
+            {{ if not (modBool (add $index 1) 2) }}
             <div class="col-12 col-lg-5 offset-lg-1 order-lg-2">
+            {{ else }}
+            <div class="col-12 col-lg-5 order-lg-1">
+            {{ end }}
                 <h2 class="h2-small text-sector-mid mt-0">{{.heading }}</h2>
                 <p class="lead-text text-sector-dark">{{ .lead }}</p>
                 <p>{{ .body | markdownify }}</p>
