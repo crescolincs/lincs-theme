@@ -1,7 +1,8 @@
 {{$imagedomain := string .Site.Params.imagedomain }}
+{{range .Params.offerfeatures.features }}
 <section class="section_50-50-image-content-download mb-5">
     <div class="container">
-        {{range .Params.offerfeatures.features }}
+        
         <div class="row">
             <div class="col-12 col-lg-6 order-lg-1 mb-4 mb-lg-0">
                 <div class="img-wrapper">
@@ -24,6 +25,7 @@
                 </div>
             </div>
         </div>
-        {{ end }}
+        
     </div>
 </section>
+{{ end }}
