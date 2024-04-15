@@ -10309,6 +10309,18 @@ a.full-card-click:after {
 
 /* sector css START */
 
+.sector_location-connectivity .btn-submit{
+  background-color: #fff!important;
+  color: ##1c1434!important
+}
+
+.sector_location-connectivity .btn-submit:hover {
+  background-color: #cf4952!important;
+  color: #fff!important
+}
+
+text-sector-light
+
 .sector_advanced-engineering-manufacturing .text-sector-light {
   color: #90a6ca
 }
@@ -10329,7 +10341,7 @@ a.full-card-click:after {
   background-color: #27357e
 }
 
-.sector_advanced-engineering-manufacturing .bg-sector-dark {
+.sector_advanced-engineering-manufacturing .bg-sector-dark, .sector_location-connectivity .bg-sector-dark {
   background-color: #252159
 }
 
@@ -10577,7 +10589,7 @@ a.full-card-click:after {
   filter: invert(37%)sepia(71%)saturate(1833%)hue-rotate(357deg)brightness(95%)contrast(90%)
 }
 
-.sector_defence-security .text-sector-light,.sector_visitor-economy .text-sector-light {
+.sector_defence-security .text-sector-light,.sector_visitor-economy .text-sector-light ,.sector_location-connectivity .text-sector-light {
   color: #dd898e
 }
 
