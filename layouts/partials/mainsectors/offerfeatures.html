@@ -12,7 +12,7 @@
             <div class="col-12 col-lg-5 offset-lg-1 order-lg-2">
                 <h2 class="h2-small text-sector-mid mt-0">{{.heading }}</h2>
                 <p class="lead-text text-sector-dark">{{ .lead }}</p>
-                <p>{{ .body }}</p>
+                <p>{{ .body | markdownify }}</p>
 
                 <div class="download-block border-sector-dark position-relative d-flex justify-content-between">
                     <div class="content">
