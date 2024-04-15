@@ -10309,26 +10309,24 @@ a.full-card-click:after {
 
 /* sector css START */
 
-.sector_location-connectivity .btn-submit{
+.sector_location-connectivity .btn-submit,.sector_support-services .btn-submit{
   background-color: #fff!important;
   color: #1c1434!important
 }
 
-.sector_location-connectivity .btn-submit:hover {
+.sector_location-connectivity .btn-submit:hover,.sector_support-services .btn-submit:hover {
   background-color: #cf4952!important;
   color: #fff!important
 }
 
-.sector_location-connectivity .btn-submit svg {
+.sector_location-connectivity .btn-submit svg, .sector_support-services .btn-submit svg {
   fill: #1c1434;
   transition: .3s
 }
 
-.sector_location-connectivity .btn-submit:hover svg {
+.sector_location-connectivity .btn-submit:hover svg, .sector_support-services .btn-submit:hover svg {
   fill: #fff
 }
-
-text-sector-light
 
 .sector_advanced-engineering-manufacturing .text-sector-light {
   color: #90a6ca
