@@ -10319,6 +10319,15 @@ a.full-card-click:after {
   color: #fff!important
 }
 
+.sector_location-connectivity .btn-submit svg {
+  fill: #1c1434;
+  transition: .3s
+}
+
+.sector_location-connectivity .btn-submit:hover svg {
+  fill: #fff
+}
+
 text-sector-light
 
 .sector_advanced-engineering-manufacturing .text-sector-light {
