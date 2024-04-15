@@ -7,13 +7,13 @@
         
         <div class="row align-items-center">
             {{ if not (modBool (add $index 1) 2) }}
-            <div class="col-12 col-lg-6 order-lg-1 mb-4 mb-lg-0">          
+            <div class="col-12 col-lg-6 order-lg-1 mb-4 mb-lg-0" style="overflow:hidden;">          
             {{ else }}
-            <div class="col-12 col-lg-6 offset-lg-1 order-lg-2 mb-4 mb-lg-0"> 
+            <div class="col-12 col-lg-6 offset-lg-1 order-lg-2 mb-4 mb-lg-0" style="overflow:hidden;"> 
             {{ end }}
-                <div class="img-wrapper">
-                    <img loading="lazy" src="{{ $imagedomain }}w_636/{{ .image }}" alt="">
-                </div>
+                <!--<div class="img-wrapper">-->
+                    <img style="object-fit: contain;height:100%" loading="lazy" src="{{ $imagedomain }}w_636/{{ .image }}" alt="">
+                <!--</div>-->
             </div>
             {{ if not (modBool (add $index 1) 2) }}
             <div class="col-12 col-lg-5 offset-lg-1 order-lg-2">
