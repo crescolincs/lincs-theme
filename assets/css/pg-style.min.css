@@ -2313,13 +2313,15 @@ p {
 
 p.p-large, div.p-large ,div.p-large p {
   font-size: 1.125rem;
-  line-height: 1.75rem
+  line-height: 1.75rem;
+  font-family: montserrat,sans-serif;
 }
 
 @media(min-width: 992px) {
   p.p-large,div.p-large, div.p-large p {
       font-size:1.3125rem;
-      line-height: 1.9375rem
+      line-height: 1.9375rem;
+      font-family: montserrat,sans-serif;
   }
 }
 
@@ -10366,7 +10368,7 @@ a.full-card-click:after {
   border: .1875rem solid #252159
 }
 
-.sector_advanced-engineering-manufacturing .section_list-and-stats ul li::marker {
+.sector_advanced-engineering-manufacturing .section_list-and-stats ul li::marker,.sector_advanced-engineering-manufacturing .section_50-50-image-content-download ul li::marker{
   color: #27357e
 }
 
@@ -10433,7 +10435,7 @@ a.full-card-click:after {
   border: .1875rem solid #126160
 }
 
-.sector_agrifood .section_list-and-stats ul li::marker,.sector_living-working .section_list-and-stats ul li::marker {
+.sector_agrifood .section_list-and-stats ul li::marker, .sector_agrifood .section_50-50-image-content-download ul li::marker,.sector_living-working .section_list-and-stats ul li::marker, .sector_living-working .section_50-50-image-content-download ul li::marker{
   color: #009e7f
 }
 
@@ -10506,7 +10508,7 @@ a.full-card-click:after {
   border: .1875rem solid #af0000
 }
 
-.sector_logistics .section_list-and-stats ul li::marker {
+.sector_logistics .section_list-and-stats ul li::marker, .sector_logistics .section_50-50-image-content-download ul li::marker {
   color: #e75a13
 }
 
@@ -10634,7 +10636,7 @@ a.full-card-click:after {
   border: .1875rem solid #80244e
 }
 
-.sector_defence-security .section_list-and-stats ul li::marker,.sector_visitor-economy .section_list-and-stats ul li::marker {
+.sector_defence-security .section_list-and-stats ul li::marker, .sector_defence-security .section_50-50-image-content-download ul li::marker ,.sector_visitor-economy .section_list-and-stats ul li::marker, .sector_visitor-economy .section_50-50-image-content-download ul li::marker {
   color: #cf4952
 }
 
@@ -10711,7 +10713,7 @@ a.full-card-click:after {
   border: .1875rem solid #005b71
 }
 
-.sector_low-carbon-energy .section_list-and-stats ul li::marker {
+.sector_low-carbon-energy .section_list-and-stats ul li::marker , .sector_low-carbon-energy .section_50-50-image-content-download ul li::marker {
   color: #0689a6
 }
 
@@ -10784,7 +10786,7 @@ a.full-card-click:after {
   border: .1875rem solid #2b3033
 }
 
-.sector_intelligent-robotics .section_list-and-stats ul li::marker {
+.sector_intelligent-robotics .section_list-and-stats ul li::marker, .sector_intelligent-robotics .section_50-50-image-content-download ul li::marker {
   color: #7a7a7f
 }
 
