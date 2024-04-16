@@ -2311,13 +2311,13 @@ p {
   }
 }
 
-p.p-large, div.p-large p {
+p.p-large, div.p-large ,div.p-large p {
   font-size: 1.125rem;
   line-height: 1.75rem
 }
 
 @media(min-width: 992px) {
-  p.p-large, div.p-large p {
+  p.p-large,div.p-large, div.p-large p {
       font-size:1.3125rem;
       line-height: 1.9375rem
   }
