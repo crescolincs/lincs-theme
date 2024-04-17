@@ -10747,7 +10747,7 @@ a.full-card-click:after {
 .sector_low-carbon-energy .other-brochures:hover {
   color: #4cbab6!important
 }
-
+.sector_low-carbon-energy  .section_get-data-form .form-content-wrapper ul li::marker{color:#4cbab6;}
 .sector_low-carbon-energy .section_investment-opportunity-block .icon-wrapper img {
   -webkit-filter: invert(42%)sepia(77%)saturate(5167%)hue-rotate(169deg)brightness(93%)contrast(95%);
   filter: invert(42%)sepia(77%)saturate(5167%)hue-rotate(169deg)brightness(93%)contrast(95%)
