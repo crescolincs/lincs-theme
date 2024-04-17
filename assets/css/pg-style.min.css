@@ -10586,8 +10586,8 @@ a.full-card-click:after {
 }
 
 .sector_logistics .btn-submit:hover {
-  background-color: #f5d23f!important;
-  color: #af0000
+  background-color: #af0000!important;
+  color: #fff;
 }
 
 .sector_logistics .other-brochures {
