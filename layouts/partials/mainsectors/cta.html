@@ -1,6 +1,6 @@
 {{ $imagedomain := string .Site.Params.imagedomain }}
 {{ $licolour := string .Params.sectorCTA.contentscolour }}
-<section class="section_get-data-form bg-sector-dark" id="get-data-form">
+<section class="section_get-data-form bg-sector-{{ .Params.sectorCTA.bgcolor }}" id="get-data-form">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-12 col-lg-8">
