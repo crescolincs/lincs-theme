@@ -10828,35 +10828,37 @@ a.full-card-click:after {
 
 .sector_agrifood .border-sector-dark svg.svgdownarrow {
   fill: #126160;
-  transition: .3s
+  transition: .3s;
 }
 
 .sector_agrifood .btn-submit:hover svg {
-  fill: #126160
+  fill: #126160;
+  transition: all .3s cubic-bezier(0,.1,.33,.99)0ms;
+
 }
 
 .sector_living-working .border-sector-light svg.svgdownarrow {
   fill: #aacf8b;
-  transition: .3s
+  transition: .3s;
 }
 
 .sector_living-working .border-sector-mid svg.svgdownarrow {
   fill: #009e7f;
-  transition: .3s
+  transition: .3s;
 }
 
 .sector_living-working .border-sector-dark svg.svgdownarrow {
   fill: #126160;
-  transition: .3s
+  transition: .3s;
 }
 
 .sector_living-working .btn-submit:hover svg {
-  fill: #126160
+  fill: #126160;
 }
 
 .sector_advanced-engineering-manufacturing .border-sector-light svg.svgdownarrow {
   fill: #90a6ca;
-  transition: .3s
+  transition: .3s;
 }
 
 .sector_advanced-engineering-manufacturing .border-sector-mid svg.svgdownarrow {
