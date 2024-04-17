@@ -10659,9 +10659,10 @@ a.full-card-click:after {
   color: #cf4952
 }
 
-.sector_defence-security .section_get-data-form ul li::marker,.sector_visitor-economy .section_get-data-form ul li::marker {
+.sector_defence-security .section_get-data-form .form-content-wrapper ul li::marker, .sector_visitor-economy .section_get-data-form .form-content-wrapper ul li::marker  {
   color: #dd898e
 }
+
 
 .sector_defence-security .btn-mid,.sector_visitor-economy .btn-mid {
   background-color: #cf4952;
