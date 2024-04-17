@@ -11,7 +11,7 @@
                 <form class="d-flex flex-column align-items-center justify-content-center">
                     <div class="form-content-wrapper d-lg-flex">
                         <div class="col-12 col-lg-4 d-flex d-lg-block justify-content-center">
-                            <style>main ul:not(.pagination) li::marker {content: "▷";font-family:system-ui;color:{{ .Params.sectorCTA.heading }};}</style>
+                            <style>main ul:not(.pagination) li::marker {content: "▷";font-family:system-ui;color:{{ .Params.sectorCTA.headingcolor }};}</style>
                             <ul>
                                 {{ range .Params.sectorCTA.brochurecontents}}
                                    <li class="{{ $licolour }}">{{ .highlight }}</li>
