@@ -10988,6 +10988,10 @@ a.full-card-click:after {
   fill: #80244e
 }
 
+.sector_visitor-economy .section_get-data-form form .form-content-wrapper ul li::marker {
+  color: #dd898e;
+
+
 .download-block:hover svg.svgdownarrow {
   margin-bottom: -8px;
   transition: 0.3s;
