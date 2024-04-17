@@ -10520,7 +10520,8 @@ a.full-card-click:after {
 
 @media(min-width: 992px) {
   .sector_logistics .section_get-data-form form .form-content-wrapper .fields {
-      border-left:.0625rem solid #1c1434
+      border-left:.0625rem solid #1c1434;
+      border-right:.0625rem solid #1c1434;
   }
 }
 
