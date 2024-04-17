@@ -10991,7 +10991,7 @@ a.full-card-click:after {
 .sector_visitor-economy .section_get-data-form form .form-content-wrapper ul li::marker {
   color: #dd898e;
 }
-.download-block .d-flex{ align-items:center;}
+.download-block.d-flex{ align-items:center;}
 .download-block:hover svg.svgdownarrow {
   margin-bottom: -8px;
   transition: 0.3s;
