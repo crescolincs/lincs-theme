@@ -10927,7 +10927,8 @@ a.full-card-click:after {
 }
 
 .sector_logistics .btn-submit:hover svg {
-  fill: #af0000
+  fill: #fff;
+  transition: all .3s cubic-bezier(0,.1,.33,.99)0ms
 }
 
 .sector_low-carbon-energy .border-sector-light svg.svgdownarrow {
