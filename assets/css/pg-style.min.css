@@ -10468,7 +10468,7 @@ a.full-card-click:after {
 .sector_agrifood .other-brochures:hover,.sector_living-working .other-brochures:hover {
   color: #aacf8b!important
 }
-.sector_agrifood .form-content-wrapper ul li::marker{color:#aacf8b;}
+.sector_agrifood .section_get-data-form .form-content-wrapper ul li::marker{color:#aacf8b;}
 .sector_agrifood .section_investment-opportunity-block .icon-wrapper img,.sector_living-working .section_investment-opportunity-block .icon-wrapper img {
   -webkit-filter: invert(47%)sepia(46%)saturate(5124%)hue-rotate(142deg)brightness(90%)contrast(101%);
   filter: invert(47%)sepia(46%)saturate(5124%)hue-rotate(142deg)brightness(90%)contrast(101%)
@@ -10596,7 +10596,7 @@ a.full-card-click:after {
 .sector_logistics .other-brochures:hover {
   color: #af0000!important
 }
-.sector_logistics .form-content-wrapper ul li::marker{color:#e75a13;}
+.sector_logistics .section_get-data-form .form-content-wrapper ul li::marker{color:#e75a13;}
 .sector_logistics .section_investment-opportunity-block .icon-wrapper img {
   -webkit-filter: invert(37%)sepia(71%)saturate(1833%)hue-rotate(357deg)brightness(95%)contrast(90%);
   filter: invert(37%)sepia(71%)saturate(1833%)hue-rotate(357deg)brightness(95%)contrast(90%)
