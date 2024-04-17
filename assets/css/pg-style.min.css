@@ -10396,6 +10396,22 @@ a.full-card-click:after {
   color: #90a6ca!important
 }
 
+.sector_advanced-engineering-manufacturing .btn-submit{
+  background-color: #fff!important;
+  color: #252159!important
+}
+
+.sector_advanced-engineering-manufacturing .btn-submit:hover {
+  background-color: #cf4952!important;
+  color: #fff!important
+}
+.sector_advanced-engineering-manufacturing .btn-submit svg {
+  fill: #252159
+}
+.sector_advanced-engineering-manufacturing .btn-submit:hover svg {
+  fill: #fff
+}
+.sector_advanced-engineering-manufacturing .section_get-data-form .form-content-wrapper ul li::marker{color:#90a6ca;} 
 .sector_advanced-engineering-manufacturing .section_investment-opportunity-block .icon-wrapper img {
   -webkit-filter: invert(21%)sepia(44%)saturate(1465%)hue-rotate(203deg)brightness(94%)contrast(103%);
   filter: invert(21%)sepia(44%)saturate(1465%)hue-rotate(203deg)brightness(94%)contrast(103%)
