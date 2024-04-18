@@ -10832,6 +10832,11 @@ a.full-card-click:after {
   -webkit-filter: invert(48%)sepia(8%)saturate(187%)hue-rotate(202deg)brightness(97%)contrast(85%);
   filter: invert(48%)sepia(8%)saturate(187%)hue-rotate(202deg)brightness(97%)contrast(85%)
 }
+.sector_intelligent-robotics .flowcolumns{
+  columns: 2;
+  column-gap: 4rem;
+
+}
 /* Sector SVG start */
 .sector_agrifood .border-sector-light svg.svgdownarrow {
   fill: #aacf8b;
