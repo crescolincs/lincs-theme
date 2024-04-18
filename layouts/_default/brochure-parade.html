@@ -1,0 +1,10 @@
+{{ define "main" }}
+<main id="main" class="">
+{{ if .Params.hero.display }}
+   {{ partial "hero.html" . }}
+{{ end }}
+{{ if .Params.brochurechoice.display }}
+   {{ partial "brochures/brochurechoice.html" . }}
+{{ end }}
+</main>
+{{ end }}
