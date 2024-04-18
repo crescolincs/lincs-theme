@@ -1,0 +1,16 @@
+{{$imagedomain := string .Site.Params.imagedomain }}
+<section class="section_list-and-stats mb-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h2 class="h2-large text-dark-blue">{{ .Params.roboticsstory.heading}}</h2>
+                <div class="p-large">{{ .Params.roboticsstory.intro | markdownify }}</div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row text-wrapper">
+            {{ .Params.roboticsstory.body | markdownify }}
+            </div>
+    </div>
+</section>

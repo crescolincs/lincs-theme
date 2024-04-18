@@ -30,7 +30,9 @@
     {{ if .Params.offerfeatures.display }}
        {{ partial "mainsectors/offerfeatures.html" . }}
     {{ end }}
-
+    {{ if .Params.roboticsstory.display }}
+       {{ partial "mainsectors/story.html" . }}
+    {{ end }}
     {{ if .Params.support.display }}
        {{ partial "mainsectors/support.html" . }}
     {{ end }}
