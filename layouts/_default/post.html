@@ -1,16 +1,16 @@
 {{$imagedomain := string .Site.Params.imagedomain }}
-<section class="section_list-and-stats mb-5">
+<section class="blog-post mb-5">
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <h2 class="h2-large text-dark-blue">{{ .Params.roboticsstory.heading}}</h2>
-                <div class="p-large">{{ .Params.roboticsstory.intro | markdownify }}</div>
+                <h2 class="h2-large text-dark-blue">{{ .Params.heading}}</h2>
+                <div class="p-large">{{ .Params.intro | markdownify }}</div>
             </div>
         </div>
     </div>
     <div class="container mt-5">
         <div class="offset-lg-2 col-lg-8">
-            {{ .Params.roboticsstory.body | markdownify }}
+            {{ .Content | markdownify }}
             </div>
     </div>
 </section>
