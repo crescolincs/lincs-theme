@@ -1,15 +1,11 @@
-entrance:
-  - text:
-    link: https://dev.entrance-3uo.pages.dev/
-living:
-  - text:
-    link: https://dev.entrance-3uo.pages.dev/living-and-working
-location:
-  - text:
-    link: https://dev.entrance-3uo.pages.dev/location-and-connectivity
-support:
-  - text:
-    link: https://dev.entrance-3uo.pages.dev/support-services
+entrance: https://dev.entrance-3uo.pages.dev/
+
+living: https://dev.entrance-3uo.pages.dev/living-and-working
+
+location: https://dev.entrance-3uo.pages.dev/location-and-connectivity
+
+support: https://dev.entrance-3uo.pages.dev/support-services
+
 sectors:
   - text: 'Advanced Engineering & Manufacturing'
     link: 'https://dev.engineering-manufacturing.pages.dev/'
