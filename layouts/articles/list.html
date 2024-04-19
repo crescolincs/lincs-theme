@@ -1,18 +1,18 @@
 {{ define "main" }}
 {{$imagedomain := string .Site.Params.imagedomain }}
-<main id="main" class="page_home sector_agrifood">
+<main id="main" class="page_home">
 <section class="section_articles-preview">
   <div class="container">
       <div class="row">
-          <div class="col-12">
+
             {{ range where .Site.Pages "Type" "article" }}
-            <div class="col-12 col-lg-4 position-relative">
+            <div class="col-12 col-lg-4 position-relative sector_{{.Params.sector}}">
                 <div class="card shadow">
                     <div class="card-header">
                         <img loading="lazy" src="{{ $imagedomain }}w_416/{{ .Params.image }}" alt="">
                     </div>
                     <div class="card-body">
-                        <p class="text-sector-mid"><small>{{ .Params.sector }}</small></p>
+                        <p class="text-sector-mid"><small>{{ .Params.sector | strings.FirstUpper }}</small></p>
                         <h2><a class="full-card-click arrow-link text-sector-mid text-decoration-none" href="{{.Permalink }}">{{ .Params.title}}</a></h2>
                         <div>{{ .Summary | truncate 200 }}</div>
                     </div>
@@ -22,7 +22,7 @@
                 </div>
             </div>
            {{ end }}
-          </div>
+
       </div>
   </div>
 </section> 
