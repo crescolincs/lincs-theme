@@ -1,15 +1,27 @@
+entrance:
+  - text:
+    link: https://dev.entrance-3uo.pages.dev/
+living:
+  - text:
+    link: https://dev.entrance-3uo.pages.dev/living-and-working
+location:
+  - text:
+    link: https://dev.entrance-3uo.pages.dev/location-and-connectivity
+support:
+  - text:
+    link: https://dev.entrance-3uo.pages.dev/support-services
 sectors:
   - text: 'Advanced Engineering & Manufacturing'
-    link: '#'
+    link: 'https://dev.engineering-manufacturing.pages.dev/'
   - text: 'Agrifood'
-    link: '#'
+    link: 'https://dev.agrifood.pages.dev/'
   - text: 'Defence & Security'
-    link: '#'
+    link: 'https://dev.defence-security.pages.dev/'
   - text: 'Logistics'
-    link: '#'
+    link: 'https://dev.logistics-b3m.pages.dev/'
   - text: 'Low Carbon Energy'
-    link: '#'
+    link: 'https://dev.low-carbon-energy-industry.pages.dev/'
   - text: 'Intelligent Robotics'
-    link: '#'
+    link: 'https://dev.robotics-8an.pages.dev/'
   - text: 'Visitor Economy'
-    link: '#'
+    link: 'https://dev.visitor-economy.pages.dev/'
