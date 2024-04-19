@@ -14,11 +14,11 @@
             <div class="col-12 col-lg-4 position-relative">
                 <div class="card shadow">
                     <div class="card-header">
-                        <img loading="lazy" src="{{ $imagedomain }}w_416/{{ .Param.image }}" alt="">
+                        <img loading="lazy" src="{{ $imagedomain }}w_416/{{ .image }}" alt="">
                     </div>
                     <div class="card-body">
-                        <p class="text-sector-mid"><small>{{ .Param.sector }}</small></p>
-                        <h2><a class="full-card-click arrow-link text-sector-mid text-decoration-none" href="#">{{ .Param.title}}</a></h2>
+                        <p class="text-sector-mid"><small>{{ .sector }}</small></p>
+                        <h2><a class="full-card-click arrow-link text-sector-mid text-decoration-none" href="{{.Permalink }}">{{ .title}}</a></h2>
                         <div>{{ .Summary | truncate 200 }}</div>
                     </div>
                     <div class="card-footer d-flex justify-content-end">
