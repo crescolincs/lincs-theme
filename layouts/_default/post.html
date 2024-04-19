@@ -3,18 +3,18 @@
 <section class="blog-post mb-5">
     <div class="container">
         <div class="row">
-            <div class="offset-lg-1 col-lg-10">
-                <image src="{{$imagedomain}}w_850/{{ .Params.image}}" />
+            <div class="col-12">
+                <image src="{{$imagedomain}}w_1200/{{ .Params.image}}" />
             </div>
         </div>
-            <div class="offset-lg-1 col-lg-10">
+            <div class="col-12">
                 <h2 class="h2-large text-dark-blue">{{ .Params.title}}</h2>
                 <div class="p-large">{{ .Params.intro | markdownify }}</div>
             </div>
         </div>
     </div>
     <div class="container mt-5">
-        <div class="offset-lg-1 col-lg-10">
+        <div class="col-12">
             {{ .Content }}
             </div>
     </div>
