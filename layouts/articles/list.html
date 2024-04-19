@@ -5,8 +5,8 @@
       <div class="row">
           <div class="col-12">
             {{ range .Pages }}
-              <img src="{{ $imagedomain }}w_340/{{.image }}"/>
-               <h3>{{ .title }}</h3>
+              <img src="{{ $imagedomain }}w_340/{{ .Params.image }}"/>
+               <h3>{{ .Params.title }}</h3>
                {{ .Summary }}
 
             {{ end }}
