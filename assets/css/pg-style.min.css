@@ -4240,7 +4240,7 @@ a.full-card-click:after {
 }
 
 .section_list-and-stats .stats-blocks .stat-block {
-  height: 16.25rem;
+  dl-no-height: 16.25rem;
   margin: 0 0 1.5rem;
   padding: 3.125rem 1.875rem 2.5rem;
   text-align: center;
@@ -4249,7 +4249,7 @@ a.full-card-click:after {
 
 @media(min-width: 992px) {
   .section_list-and-stats .stats-blocks .stat-block {
-      height:18.4375rem;
+      dl-no-height:18.4375rem;
       width: 20rem
   }
 }
