@@ -7,55 +7,29 @@
             </div>
         </div>
         <div class="row">
+            {{ range .Pages "section" "article" }}  
             <div class="col-12 col-lg-4 position-relative">
                 <div class="card shadow">
                     <div class="card-header">
-                        <img loading="lazy" src="{{ $imagedomain }}w_416/article-1.jpg" alt="">
+                        <img loading="lazy" src="{{ $imagedomain }}w_416/{{ .Param.image }}" alt="">
                     </div>
                     <div class="card-body">
-                        <p class="text-sector-mid"><small>Agrifood</small></p>
-                        <h2><a class="full-card-click arrow-link text-sector-mid text-decoration-none" href="#">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod</a></h2>
-                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et.</p>
+                        <p class="text-sector-mid"><small>{{ .Param.sector }}</small></p>
+                        <h2><a class="full-card-click arrow-link text-sector-mid text-decoration-none" href="#">{{ .Param.title}}</a></h2>
+                        <div>{{ .Summary | truncate 200 }}</div>
                     </div>
                     <div class="card-footer d-flex justify-content-end">
                         <i class="fa-sharp fa-regular fa-arrow-right text-sector-mid"></i>
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-lg-4 position-relative">
-                <div class="card shadow">
-                    <div class="card-header">
-                        <img loading="lazy" src="{{ $imagedomain }}w_416/article-2.jpg" alt="">
-                    </div>
-                    <div class="card-body">
-                        <p class="text-sector-mid"><small>Agrifood</small></p>
-                        <h2><a class="full-card-click arrow-link text-sector-mid text-decoration-none" href="#">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod</a></h2>
-                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et.</p>
-                    </div>
-                    <div class="card-footer d-flex justify-content-end">
-                        <i class="fa-sharp fa-regular fa-arrow-right text-sector-mid"></i>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-lg-4 position-relative">
-                <div class="card shadow">
-                    <div class="card-header">
-                        <img loading="lazy" src="{{ $imagedomain }}w_416/article-3.jpg" alt="">
-                    </div>
-                    <div class="card-body">
-                        <p class="text-sector-mid"><small>Agrifood</small></p>
-                        <h2><a class="full-card-click arrow-link text-sector-mid text-decoration-none" href="#">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod</a></h2>
-                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et.</p>
-                    </div>
-                    <div class="card-footer d-flex justify-content-end">
-                        <i class="fa-sharp fa-regular fa-arrow-right text-sector-mid"></i>
-                    </div>
-                </div>
-            </div>
+           {{ end }}
+
+
         </div>
         <div class="row">
             <div class="col-12">
-                <a href="/pages/advanced-engineering-manufacturing/articles-case-studies.php" class="btn btn-mid text-center bg-sector-mid">View all articles</a>
+                <a href="{{ .RelPermalink }}/articles" class="btn btn-mid text-center bg-sector-mid">View all articles</a>
             </div>
         </div>
     </div>
