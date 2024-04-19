@@ -1,9 +1,15 @@
 {{ define "main" }}
+{{$imagedomain := string .Site.Params.imagedomain }}
 <section class="blog-post mb-5">
   <div class="container">
       <div class="row">
           <div class="col-12">
-  {{ .Content }}
+            {{ range .Site.GetPage "section" "articles" }}
+              <img src="{{ $imagedomain }}w_340/{{.Params.image }}"/>
+               <h3>{{ .Params.title }}.title</h3>
+               {{ .Summary }}
+
+            {{ end }}
           </div>
       </div>
   </div>
