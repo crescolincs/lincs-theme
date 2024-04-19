@@ -4,13 +4,23 @@
   <div class="container">
       <div class="row">
           <div class="col-12">
-            {{ range .Pages }}
-            <div>
-              <img src="{{ $imagedomain }}w_340/{{ .Params.image }}"/>
-               <h3><a href="{{ .RelPermalink }}">{{ .Params.title }}</a></h3>
-               {{ .Summary }}
+            {{ range where .Site.Pages "Type" "article" }}
+            <div class="col-12 col-lg-4 position-relative">
+                <div class="card shadow">
+                    <div class="card-header">
+                        <img loading="lazy" src="{{ $imagedomain }}w_416/{{ .Params.image }}" alt="">
+                    </div>
+                    <div class="card-body">
+                        <p class="text-sector-mid"><small>{{ .Params.sector }}</small></p>
+                        <h2><a class="full-card-click arrow-link text-sector-mid text-decoration-none" href="{{.Permalink }}">{{ .Params.title}}</a></h2>
+                        <div>{{ .Summary | truncate 200 }}</div>
+                    </div>
+                    <div class="card-footer d-flex justify-content-end">
+                        <i class="fa-sharp fa-regular fa-arrow-right text-sector-mid"></i>
+                    </div>
+                </div>
             </div>
-            {{ end }}
+           {{ end }}
           </div>
       </div>
   </div>
