@@ -4,7 +4,7 @@
   <div class="container">
       <div class="row">
           <div class="col-12">
-            {{ with .Site.GetPage "section" "articles" }}
+            {{ range .Pages }}
               <img src="{{ $imagedomain }}w_340/{{.image }}"/>
                <h3>{{ .title }}</h3>
                {{ .Summary }}
