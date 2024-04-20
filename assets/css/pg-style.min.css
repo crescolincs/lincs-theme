@@ -4282,35 +4282,35 @@ a.full-card-click:after {
 }
 
 .section_list-and-stats .stats-blocks .stat-block.stat-consumers .stat {
-  line-height: 2.8125rem
+  line-height: 2.5rem
 }
 
 @media(min-width: 992px) {
   .section_list-and-stats .stats-blocks .stat-block.stat-consumers .stat {
-      line-height:3.75rem
+      line-height:2.5rem
   }
 }
 
 .section_list-and-stats .stats-blocks .stat-block.stat-consumers .stat span:first-of-type {
   font-family: josefin-sans,sans-serif;
-  font-size: 3.125rem;
+  font-size: 2.5rem;
   font-style: normal;
   font-weight: 400
 }
 
 @media(min-width: 992px) {
   .section_list-and-stats .stats-blocks .stat-block.stat-consumers .stat span:first-of-type {
-      font-size:4.4375rem
+      font-size:2.5rem
   }
 }
 
 .section_list-and-stats .stats-blocks .stat-block.stat-consumers .stat span:nth-of-type(2) {
-  font-size: 1.875rem
+  font-size: 1.8rem
 }
 
 @media(min-width: 1200px) {
   .section_list-and-stats .stats-blocks .stat-block.stat-consumers .stat span:nth-of-type(2) {
-      font-size:2.5625rem
+      font-size:1.8rem
   }
 
   .section_list-and-stats .stats-blocks .stat-block.stat-value {
