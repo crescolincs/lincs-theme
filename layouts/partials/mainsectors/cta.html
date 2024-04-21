@@ -8,7 +8,7 @@
                 <p class="{{ .Params.sectorCTA.contentscolour }} text-center p-large">{{ .Params.sectorCTA.lead }}</p>
             </div>
             <div class="col-12 col-lg-12">
-                <form class="d-flex flex-column align-items-center justify-content-center">
+                <form action="/{{ .Params.sectorCTA.formhandler }}" method="post" class="d-flex flex-column align-items-center justify-content-center">
                     <div class="form-content-wrapper d-lg-flex">
                         <div class="col-12 col-lg-4 d-flex d-lg-block justify-content-center">
                             <style>main ul:not(.pagination) li::marker {content: "▷";font-family:system-ui;}</style>
@@ -44,6 +44,9 @@
                         </div>
                     </div>
                     <div class="field-wrapper d-flex flex-column align-items-center">
+                      {{range .Params.sectorCTA.hiddenformfields }}
+                        <input type="hidden" id="{{ .field }}" name="{{ .field }}" value="{{ .value }}">
+                      {{ end }}
                         <button class="btn btn-submit" type="submit">Submit to Download<i class="fa-sharp fa-regular fa-arrow-right ms-4"><svg width="16" height="16" fill="#ffffff" version="1.1" viewBox="0 0 .96 .96" xmlns="http://www.w3.org/2000/svg"><path d="m0 0.55219 0.68407 4.8e-5 -0.30485 0.30557 0.10179 0.10219 0.47899-0.48014-0.47861-0.47986-0.10189 0.10219 0.30485 0.30557h-0.68426z" stroke-width=".04794"></path></svg></i></button>
                     </div>
 
