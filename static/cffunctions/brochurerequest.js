@@ -107,7 +107,7 @@ async function handleRequest({ request, env }) {
               "email": toemail, "name": toname
           }
           ],
-          "subject": "Your ${brochure} brochure from Invest Lincolnshire",
+          "subject": `Your ${brochure} brochure from Invest Lincolnshire`,
           "text": bodyofemail,//"url.pathname "+requrl+" the request method was"+request.method+" you submitted the following email address "+formReceived.fields.email+" hidden name of the form "+formReceived.fields.sender,
           "html": bodyofemail.replaceAll('\n','<br>') //"url.pathname "+requrl+" the request method was"+request.method+" you submitted the following email address "+formReceived.fields.email+" hidden name of the form "+formReceived.fields.sender
         }
