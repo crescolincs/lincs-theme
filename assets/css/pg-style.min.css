@@ -4981,6 +4981,20 @@ a.full-card-click:after {
   color: #27357e
 }
 
+.contentblock p:first-of-type{font-size: 1.3125rem;line-height: 1.9375rem;}
+.sector_advanced-engineering-manufacturing .contentblock h3{color:#27357e;} 
+.sector_advanced-engineering-manufacturing .contentblock p:first-of-type{color:#252159;}
+.sector_agrifood .contentblock h3,.sector_living-working .contentblock h3{color:#009e7f;} 
+.sector_agrifood .contentblock p:first-of-type, .sector_living-working .contentblock p:first-of-type{color:#126160;}
+.sector_logistics .contentblock h3{color:#e75a13;} 
+.sector_logistics .contentblock p:first-of-type{color:#af0000;}
+.sector_defence-security .contentblock h3{color:#cf4952;} 
+.sector_defence-security .contentblock p:first-of-type{color:#80244e;}
+.sector_low-carbon-energy .contentblock h3{color:#0689a6;} 
+.sector_low-carbon-energy .contentblock p:first-of-type{color:#005b71;}
+.sector_intelligent-robotics .contentblock h3{color:#7a7a7f;} 
+.sector_intelligent-robotics .contentblock p:first-of-type{color:#2b3033;}
+
 .section_brochure-download-form .card {
   border: 0;
   height: 100%;
