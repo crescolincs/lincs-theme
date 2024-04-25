@@ -1,10 +1,11 @@
 {{ define "main" }}
 {{$imagedomain := string .Site.Params.imagedomain }}
-<section class="section_article-header mb-5 sector_{{ .Params.sector}}">
+<main id="main" class="sector_{{ .Params.sector}}"></main>
+<section class="section_article-header mb-5">
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <p class="sector text-invest-blue">{{ .Params.sector}}</p>
+                <p class="sector text-sector-mid">{{ .Params.sector}}</p>
                 <h1 class="text-invest-blue">{{ .Params.title}}</h1>
 
                 <div class="img-wrapper">
@@ -14,15 +15,16 @@
         </div>
     </div>
 </section>
-
-<section class="section_article-text sector_{{ .Params.sector}}">
+<style>.content h3{color:#009e7f;} .content .p:first-of-type{font-size: 1.3125rem;line-height: 1.9375rem; color:#126160;}</style>>
+<section class="section_article-text">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-12 col-lg-8">
-                <div class="text-dark-blue mb-5">{{ .Content }}
+                <div class="text-dark-blue mb-5 content">{{ .Content }}
                 </div>
             </div>
         </div>
     </div>
 </section>
+</main>
 {{ end }}
