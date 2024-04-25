@@ -204,6 +204,8 @@
   --bs-form-invalid-color: #dc3545;
   --bs-form-invalid-border-color: #dc3545;
   --sector-agrifood-mid: #009e7f;
+  --sector-agrifood-dark: #126160;
+  ;
 }
 
 *,:after,:before {
