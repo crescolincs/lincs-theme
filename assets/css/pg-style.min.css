@@ -3035,8 +3035,8 @@ main ul:not(.pagination) li {
 }
 
 main ul:not(.pagination) li::marker {
-  content: "";
-  font-family: Font Awesome\ 6 Pro;
+  content: "▷";
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-weight: 700;
   padding-right: .5rem
 }
