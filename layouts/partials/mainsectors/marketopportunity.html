@@ -26,20 +26,20 @@
             <div class="col-12 col-lg-7 d-flex align-items-center mt-4 mt-lg-0">
                 <div class="row justify-content-center align-items-center stats-blocks">
 
-                    {{$len := len .Params.marketopportunity.stats }}    <!-- len .Params.investmentopportunity.offer -->
+                    {{$len := len .Params.marketopportunity.stats }} 
                     {{range $index, $element := .Params.marketopportunity.stats}}
                     {{ if and (eq (add $index 1) $len ) (not (modBool (add $index 1) 2)) }}
-                    <div class="stat-block stat-consumers col-8 col-lg-6 offset-lg-3 bg-sector-{{ .clrscheme }}">
+                      <div class="stat-block stat-consumers col-8 col-lg-6 offset-lg-3 bg-sector-{{ .clrscheme }}">
                     {{ else}}
-                    <div class="stat-block stat-consumers col-8 col-lg-5 bg-sector-{{ .clrscheme }}">
+                      <div class="stat-block stat-consumers col-8 col-lg-5 bg-sector-{{ .clrscheme }}">
                     {{ end }}
                         <p class="label text-{{ .textcolor }}">{{ .name }}</p>
                         <hr class="text-{{ .textcolor }}">
                         <p class="stat text-{{ .textcolor }}"><span>{{ .size }}</span><span>{{ .measure }}</span></p>
-                    </div>
+                      </div>
                     {{ end }}
+                    </div>
                 </div>
-            </div>
         </div>
     </div>
 </section>

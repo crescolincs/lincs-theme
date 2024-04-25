@@ -1,23 +1,28 @@
 {{ define "main" }}
 {{$imagedomain := string .Site.Params.imagedomain }}
-<section class="blog-post mb-5 sector_{{ .Params.sector }}">
-    <style>h3{ font-size: 1.875rem; line-height: 2.5rem;color:#009e7f;}</style>
+<section class="section_article-header mb-5">
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <img loading="lazy" src="{{$imagedomain}}w_1200/{{ .Params.image}}" />
-            </div>
-        </div>
-            <div class="col-12">
-                <h2 class="h2-large text-dark-blue">{{ .Params.title}}</h2>
-                <div class="p-large">{{ .Params.intro | markdownify }}</div>
+                <p class="sector text-invest-blue">{{ .Params.sector}}</p>
+                <h1 class="text-invest-blue">{{ .Params.title}}</h1>
+
+                <div class="img-wrapper">
+                    <img src="{{$imagedomain}}w_1200/{{ .Params.image}}" alt="" />
+                </div>
             </div>
         </div>
     </div>
-    <div class="container mt-5">
-        <div class="col-12">
-            {{ .Content }}
+</section>
+
+<section class="section_article-text">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-lg-8">
+                <div class="text-dark-blue mb-5">{{ .Content }}
+                </div>
             </div>
+        </div>
     </div>
 </section>
 {{ end }}
