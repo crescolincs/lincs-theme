@@ -21,7 +21,7 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-12 col-lg-8">
-                <div class="text-dark-blue mb-5 contentblock">{{ .Content }}
+                <div class="text-dark-blue mb-5 contentblock">{{ .Content | safeHTML }}
                 </div>
             </div>
         </div>
