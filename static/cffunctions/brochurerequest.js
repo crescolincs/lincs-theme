@@ -41,6 +41,38 @@ async function handleRequest({ request, env }) {
       }
     }
     async function formtoairtable(formReceived){
+      var fetchurl = 'https://api.airtable.com/v0/appTDInc67J2LFy2g/tblE0z8AesoW6O0pw'
+      var fetchmethod = 'GET'
+      //// need to check the database for a record with the submitted email
+      fetchurl = fetchurl + `?fields%5B%5D=brochure-requested&filterByFormula=(%7Bemail%7D%3D'${formReceived.email}')`
+      const airtablecheck = await fetch(fetchurl, {
+        method: fetchmethod,
+        body: airtablejson,
+        headers: {
+        'Authorization': 'Bearer '+env.AT_TKN,
+        'Content-Type': 'application/json',
+        'X-Requested-With': 'XMLHttpRequest',
+        }
+      })
+      const airtablecheckJSON = await airtablecheck.json()
+
+      if(airtablecheckJSON.records.length > 0){
+        console.log("We are PATCHING with this id: "+airtablecheckJSON.records[0].id)
+        console.log("brochure-requested in the form: "+formReceived.brochure +" existing brochures "+airtablecheckJSON.records[0].fields["brochure-requested"])
+       var thenewbrochurereqs = formReceived.brochure + ','+airtablecheckJSON.records[0].fields["brochure-requested"]
+        fetchmethod = 'PATCH'
+      var airtablejson = `{"records": [
+        {
+        "id": "${airtablecheckJSON.records[0].id}",
+        "fields": {
+          "brochure-requested": "${thenewbrochurereqs}"
+        }
+      }]}`
+      // 
+      // else we POST a whole new record
+      }else{
+      console.log("We are POSTING")
+      fetchmethod ='POST'
       var airtablejson =`{
         "fields": {
           "Name": "${formReceived.name}",
@@ -48,11 +80,12 @@ async function handleRequest({ request, env }) {
           "policy-agreed": true,
           "from-form": "${formReceived.page}",
           "brochure-requested": "${formReceived.brochure}"
-        }
-      }`
-      //console.log(airtablejson)
-      const airtableresponse = await fetch(`https://api.airtable.com/v0/appTDInc67J2LFy2g/tblE0z8AesoW6O0pw`, {
-         method: 'POST',
+         }
+       }`
+      }// end if a record exists
+      console.log("the airtablejson: "+airtablejson)
+      const airtableresponse = await fetch(fetchurl, {
+         method: fetchmethod,
          body: airtablejson,
          headers: {
          'Authorization': 'Bearer '+env.AT_TKN,
@@ -60,8 +93,15 @@ async function handleRequest({ request, env }) {
          'X-Requested-With': 'XMLHttpRequest',
          }
        })
-      return airtableresponse
+       const airtableJSON = await airtableresponse.json()
+       console.log("response after "+fetchmethod+": "+JSON.stringify(airtableJSON))
+       if(fetchmethod == 'POST'){
+        return airtableJSON.id
+       }else{
+        return airtableJSON.records[0].id //return from PATCH
+       }
      };
+    
       // Send email to team
     async function sendemailtobackoffice(request, formreceived) {
       var bodyofemail = '';
@@ -78,7 +118,7 @@ async function handleRequest({ request, env }) {
             "email": "crescolincs@gmail.com", "name": "Cresco Lincs"
         }
         ],
-        "subject": "Invest Lincolnshire Enquiry from "+formreceived.sender,
+        "subject": "Invest Lincolnshire Enquiry from "+formreceived.name,
         "text": bodyofemail,//"url.pathname "+requrl+" the request method was"+request.method+" you submitted the following email address "+formReceived.fields.email+" hidden name of the form "+formReceived.fields.sender,
         "html": bodyofemail.replaceAll('\n','<br>') //"url.pathname "+requrl+" the request method was"+request.method+" you submitted the following email address "+formReceived.fields.email+" hidden name of the form "+formReceived.fields.sender
       }
@@ -95,7 +135,7 @@ async function handleRequest({ request, env }) {
     };
        // Send email to Requestor
        async function sendemailtorequester(request, toemail, toname, brochure, atid) {
-        var bodyofemail = 'You can download your brochure from https://brochures.pages.dev/sendbrochures/'+atid+'/'+brochure;
+        var bodyofemail = 'You can download your brochure from '+env.BROCHURE_DOWNLOADS+atid+'/'+brochure;
 
         const emailbody = 
         {
@@ -107,7 +147,7 @@ async function handleRequest({ request, env }) {
               "email": toemail, "name": toname
           }
           ],
-          "subject": `Your ${brochure} brochure from Invest Lincolnshire`,
+          "subject": "Your "+brochure+" brochure from Invest Lincolnshire",
           "text": bodyofemail,//"url.pathname "+requrl+" the request method was"+request.method+" you submitted the following email address "+formReceived.fields.email+" hidden name of the form "+formReceived.fields.sender,
           "html": bodyofemail.replaceAll('\n','<br>') //"url.pathname "+requrl+" the request method was"+request.method+" you submitted the following email address "+formReceived.fields.email+" hidden name of the form "+formReceived.fields.sender
         }
@@ -124,16 +164,17 @@ async function handleRequest({ request, env }) {
       };     
     if (request.method === "POST") {
       const reqBody = await readRequestBody(request);
-      const retBody = `The request body sent in was ${reqBody}`;
-      console.log("retbody = "+retBody)
-      console.log("requestors email address   "+reqBody.email)
+      //const retBody = `The request body sent in was ${reqBody}`;
+      //console.log("retbody = "+retBody)
+      //console.log("requestors email address   "+reqBody.email)
       const backofficemailresponse = await sendemailtobackoffice(request, reqBody) 
-      const airtableresponse = await formtoairtable(reqBody)
-      const airtableJSON = await airtableresponse.json()
+      const leadid = await formtoairtable(reqBody)
+      //console.log("leadid: "+leadid)
+      //const airtableJSON = await airtableresponse.json()
       
-      const usermailresponse = await sendemailtorequester(request,  reqBody.email, reqBody.name, reqBody.brochure, airtableJSON.id) 
+      const usermailresponse = await sendemailtorequester(request,  reqBody.email, reqBody.name, reqBody.brochure, leadid) 
       //console.log('redirecturl = '+redirecturl)
-      return Response.redirect('https://brochures.pages.dev/sendbrochures/'+airtableJSON.id+'/'+reqBody.brochure);
+      return Response.redirect(env.BROCHURE_DOWNLOADS+leadid+'/'+reqBody.brochure);
       
     } else if (request.method === "GET") {
       return new Response("The request was a GET");
