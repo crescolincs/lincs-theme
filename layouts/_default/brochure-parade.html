@@ -1,4 +1,5 @@
 {{ define "main" }}
+<form action="/multibrochures>" method="POST"></form>
 <main id="main" class="section_brochure-download-form">
 {{ if .Params.hero.display }}
    {{ partial "hero.html" . }}
@@ -7,4 +8,5 @@
    {{ partial "brochures/brochurechoice.html" . }}
 {{ end }}
 </main>
+</form>
 {{ end }}
