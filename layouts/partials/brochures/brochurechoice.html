@@ -1,7 +1,8 @@
 {{$imagedomain := string .Site.Params.imagedomain }}
+<form action="/multibrochures>" method="POST">
 <div class="container">
     <div class="row">
-        <form action="/multibrochures>" method="POST">
+       
         {{ range .Params.brochurechoice.brochures}}
         <div class="col-12 col-lg-3 card-wrapper">
             <div class="card shadow">
@@ -23,9 +24,10 @@
         {{ end }}
         <input type="hidden" name="email" value="USEREMAIL">
         <input type="hidden" name="id" value="USERID">
-        </form>
-
+        
+        <input class="btn btn-submit" type="submit" value="Send Brochure Download Request">
 
 
     </div>
 </div>
+</form>
