@@ -35,8 +35,7 @@ async function handleRequest({ request, env }) {
         }
         return body;
       } else {
-        // Perhaps some other type of data was submitted in the form
-        // like an image, or some other binary data.
+        // Perhaps some other type of data was submitted in the form like an image, or some other binary data.
         return "a file";
       }
     }
