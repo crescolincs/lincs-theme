@@ -11,8 +11,8 @@
                     <h2 class="m-0 text-green">{{ .title }}</h2>
 
                     <div class="field-wrapper brochure-checkbox d-flex align-items-end">
-                        <label class="checkbox-label" for="agrifood-brochure">
-                            <input class="brochure-checkbox" type="checkbox" id="agrifood-brochure" name="agrifood-brochure" data-file="{{ .url }}.pdf">
+                        <label class="checkbox-label" for="{{ .url }}">
+                            <input class="brochure-checkbox" type="checkbox" name="brochure" id="{{ .url }}" value="{{ .url }}">
                             <span class="checkmark"></span>
                         </label>
                     </div>
