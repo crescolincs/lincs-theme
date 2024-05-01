@@ -1,23 +1,23 @@
-entrance: https://dev.entrance-3uo.pages.dev
+entrance: https://investlincolnshire.co.uk/
 
-living: https://dev.entrance-3uo.pages.dev/living-and-working
+living: https://investlincolnshire.co.uk/living-and-working
 
-location: https://dev.entrance-3uo.pages.dev/location-and-connectivity
+location: https://investlincolnshire.co.uk/location-and-connectivity
 
-support: https://dev.entrance-3uo.pages.dev/support-services
+support: https://investlincolnshire.co.uk/support-services
 
 sectors:
   - text: 'Advanced Engineering & Manufacturing'
-    link: 'https://dev.engineering-manufacturing.pages.dev/'
+    link: 'https://engineering-manufacturing.investlincolnshire.co.uk/'
   - text: 'Agrifood'
-    link: 'https://dev.agrifood.pages.dev/'
+    link: 'https://agrifood.investlincolnshire.co.uk'
   - text: 'Defence & Security'
-    link: 'https://dev.defence-security.pages.dev/'
+    link: 'https://defence-security.investlincolnshire.co.uk/'
   - text: 'Logistics'
-    link: 'https://dev.logistics-b3m.pages.dev/'
+    link: 'https://logistics.investlincolnshire.co.uk/'
   - text: 'Low Carbon Energy'
-    link: 'https://dev.low-carbon-energy-industry.pages.dev/'
-  - text: 'Intelligent Robotics'
-    link: 'https://dev.robotics-8an.pages.dev/'
+    link: 'https://low-carbon-energy-industry.investlincolnshire.co.uk/'
+  - text: 'AI & Intelligent Robotics'
+    link: 'https://ai-and-robotics.investlincolnshire.co.uk/'
   - text: 'Visitor Economy'
-    link: 'https://dev.visitor-economy.pages.dev/'
+    link: 'https://visitor-economy.investlincolnshire.co.uk/'

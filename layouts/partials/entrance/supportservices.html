@@ -4,12 +4,16 @@
     <div class="container bg-white">
         <div class="row">
             <div class="col-12">
-                <h2 class="h2-small text-invest-blue mt-0">Services for investing businesses</h2>
+                <h2 class="h2-small text-invest-blue mt-0">{{ .Params.supportservices.heading }}</h2>
             </div>
         </div>
         <div class="row">
             <div class="col-12 col-lg-6">
-                <p class="mb-4 mb-lg-5 p-large">Invest Lincolnshire is the official inward investment agency for Lincolnshire. Working with our partner organisations, including local authorities, education providers and businesses, we provide dedicated support to ensure a ‘soft landing’ for companies investing in Lincolnshire.</p>
+                <ul>
+                    {{ range .Params.supportservices.services }}
+                    <li> {{ .service }}</li>
+                    {{ end }}
+                </ul>
                 <div class="contact-block border-dark-blue mb-4 mb-lg-0 position-relative d-flex justify-content-between align-items-center">
                     <div class="content">
                         <h3 class="mt-0 mb-1 text-dark-blue">Contact us</h3>
@@ -31,16 +35,12 @@
                 </div>
             </div> -->
             <div class="col-12 col-lg-5 offset-lg-1">
-                <ul>
-                    <li>Support finding the right site or property</li>
-                    <li>Planning application support and guidance</li>
-                    <li>Location, economic and market intelligence</li>
-                    <li>Access to workforce recruitment, education and training solutions</li>
-                    <li>Access to sector specialists</li>
-                    <li>Access to sector-specific support programmes</li>
-                    <li>Access to local supply chains and business</li>
-                    <li>Access to funding for business investment</li>
-                </ul>
+                <div class="col-12 col-sm-6 col-lg-3 end-card-wrapper position-relative d-flex flex-column justify-content-between findoutmore">
+                    <h3><a class="full-card-click arrow-link" href="/contact"><span class="first-line d-block fw-bold text-uppercase">Get in Touch</span><span class="d-block">Contact Invest Lincolnshire. We have experts waiting to help you.</span></a></h3>
+                    <div class="btn-wrapper d-flex justify-content-end">
+                        <i xxxclass="fa-sharp fa-regular fa-arrow-right"><svg fill="white" width="26.5px" height="30px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M5.975 17.504l14.287.001-6.367 6.366L16.021 26l10.004-10.003L16.029 6l-2.128 2.129 6.367 6.366H5.977z"></path></svg></i>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
