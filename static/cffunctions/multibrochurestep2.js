@@ -130,7 +130,7 @@ export async function onRequestPost(context) {
             {
               "from": {"email": "team@investlincolnshire.co.uk", "name": "Team Invest Lincs"},
               "to": [{"email": "crescolincs@gmail.com", "name": "Cresco Lincs"}],
-              "subject": "Invest Lincolnshire Enquiry from "+formreceived.name,
+              "subject": "Invest Lincolnshire Enquiry from All Brochures page",
               "text": bodyofemail,//"url.pathname "+requrl+" the request method was"+request.method+" you submitted the following email address "+formReceived.fields.email+" hidden name of the form "+formReceived.fields.sender,
               "html": bodyofemail.replaceAll('\n','<br>') //"url.pathname "+requrl+" the request method was"+request.method+" you submitted the following email address "+formReceived.fields.email+" hidden name of the form "+formReceived.fields.sender
             }
