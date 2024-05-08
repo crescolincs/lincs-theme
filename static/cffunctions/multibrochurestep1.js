@@ -114,12 +114,12 @@ export async function onRequestPost(context) {
     const reqBody = await readRequestBody(request);
     const leadid = await formtoairtable(reqBody);
     const requrl = new URL(request.url);
-    const templateurl = requrl.protocol+'//'+requrl.host+'/brochure/index';
-    const thankstemplate = await fetch(templateurl);
+    const templateurl = requrl.protocol+'//'+requrl.host+'/brochures/index';
+    const brochureparade = await fetch(templateurl);
     
     const options = {"type":"brochureRequest","useremail":reqBody.email,"userid":leadid} // replace useremail and userid from form submission and airtable respectively
         return new HTMLRewriter()
         .on('form', new ElementHandler(options))
-        .transform(thankstemplate);
+        .transform(brochureparade);
     }
   }
