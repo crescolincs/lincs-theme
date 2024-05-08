@@ -1,14 +1,7 @@
 // Only allow the form to be submitted if at least 1 of the brochures is selected
 // get post request check for brochures
 /*
-          for (const entry of formData.entries()) {
-            if(entry[0] == 'brochure'){
-              body[entry[0]] = formData.getAll(entry[0]);
-              }else{
-                body[entry[0]] = entry[1]
-              }
-          }
-   update the airtable records with requested brochures
+    update the airtable records with requested brochures
    send an email with links to each download selected
    
    display a thankyou message with reminder to check email

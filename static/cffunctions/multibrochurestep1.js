@@ -1,7 +1,6 @@
 // process the form
 // store values in airtable
 // display the brochure parade form using HTMLWriter values to replace USEREMAIL and USERID
-
 export async function onRequestPost(context) {
     try {
       return await handleRequest(context);
@@ -19,7 +18,6 @@ export async function onRequestPost(context) {
       if(element.tagName === 'form'){      
         element.append(`<input type="hidden" name="email" value="${this.options.useremail}"><input type="hidden" name="userid" value="${this.options.userid}">`,{ html: true })
        }
-
     }
   
     comments(comment) {
