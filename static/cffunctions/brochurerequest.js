@@ -39,6 +39,22 @@ export async function onRequestPost(context) {
           return "a file";
         }
       }
+
+      class ElementHandler {
+        constructor(options) {this.options = options;}
+        element(element) {
+          // An incoming element, such as `div`
+          console.log(`Incoming element: ${element.tagName}`);
+          // apend hidden form fields                
+            element.setInnerContent(`email address ${this.options.useremail}`,{ html: true })       
+        }      
+        comments(comment) {
+          // An incoming comment
+        }      
+        text(text) {
+          // An incoming piece of text
+        }
+      }
       async function formtoairtable(formReceived){
         var fetchurl = 'https://api.airtable.com/v0/appTDInc67J2LFy2g/tblE0z8AesoW6O0pw'
         var fetchmethod = 'GET'
@@ -172,7 +188,14 @@ export async function onRequestPost(context) {
         
         const usermailresponse = await sendemailtorequester(request,  reqBody.email, reqBody.name, reqBody.brochure, leadid) 
         //console.log('redirecturl = '+redirecturl)
-        return Response.redirect(env.BROCHURE_DOWNLOADS+leadid+'/'+reqBody.brochure);
+        const requrl = new URL(request.url)
+        const templateurl = requrl.protocol+'//'+requrl.host+'/brochure-thanks/index' //'http://localhost:1313/brochures/'
+        const thankstemplate = await fetch(templateurl);
+        
+        const options = {"type":"brochureRequest","useremail":reqBody.email} // replace useremail and userid from form submission and airtable respectively
+            return new HTMLRewriter()
+            .on('span.requestoremail', new ElementHandler(options))
+            .transform(thankstemplate);
         
       } else if (request.method === "GET") {
         return new Response("The request was a GET");
