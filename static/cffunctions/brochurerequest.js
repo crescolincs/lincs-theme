@@ -149,7 +149,7 @@ export async function onRequestPost(context) {
       };
          // Send email to Requestor of the download
          async function sendemailtorequester(request, toemail, toname, brochure, atid) {
-          var bodyofemail = 'You can download your brochure from '+env.BROCHURE_DOWNLOADS+atid+'/'+brochure;
+          var bodyofemail = 'You can download your '+brochure+' brochure from\n\n '+env.BROCHURE_DOWNLOADS+atid+'/'+brochure;
   
           const emailbody = 
           {

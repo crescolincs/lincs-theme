@@ -150,7 +150,7 @@ export async function onRequestPost(context) {
                //loop brochures
                var brochurelinks = ''
               for (const brochure of brochures) {
-                    brochurelinks = brochurelinks + `https://brochures.investlincolnshire.co.uk/sendbrochures/${atid}/${brochure}\n`;
+                    brochurelinks = brochurelinks + `${brochure} https://brochures.investlincolnshire.co.uk/sendbrochures/${atid}/${brochure}\n\n`;
               }
               var bodyofemail = 'You can download the documents you requested from the following links:\n\n'+brochurelinks;
               const emailparts = 
