@@ -188,7 +188,7 @@
                                 <input type="checkbox" id="privacy-policy" name="privacy-policy" required>
                                 <span class="checkmark"></span>
                             </label>
-                            <p><small>The data you submit here will only be used in relation to your enquiry. By submitting any enquires via this part of the website you are granting us permission to store and process your data as according to our privacy policy. Your information will never be sold on to any third parties.</small></p>
+                            <p><small>*(required) The data you submit here will only be used in relation to your enquiry. By submitting any enquires via this part of the website you are granting us permission to store and process your data as according to our privacy policy. Your information will never be sold on to any third parties.</small></p>
                         </div>
                         <div class="field-wrapper">
                             <input class="btn btn-submit" type="submit" value="Send Message">
@@ -226,6 +226,7 @@
     </section>
     {{ with site.GetPage "home" }}
     {{ partial "entrance/growthsectors.html" . }}
+    {{ partial "entrance/othersectors.html" . }}
     {{ end }}
 
 </main>

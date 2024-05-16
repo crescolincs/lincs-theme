@@ -17,6 +17,7 @@
    {{ end }}
    {{ with site.GetPage "home" }}
        {{ partial "entrance/growthsectors.html" . }}
+       {{ partial "entrance/othersectors.html" . }}
    {{ end }}
    {{ if .Params.sectorCTA.display }}
        {{ partial "mainsectors/cta.html" . }}

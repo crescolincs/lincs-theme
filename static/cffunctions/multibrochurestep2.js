@@ -152,7 +152,7 @@ export async function onRequestPost(context) {
               for (const brochure of brochures) {
                     brochurelinks = brochurelinks + `${brochure} https://brochures.investlincolnshire.co.uk/sendbrochures/${atid}/${brochure}\n\n`;
               }
-              var bodyofemail = 'You can download the documents you requested from the following links:\n\n'+brochurelinks;
+              var bodyofemail = 'Thank you for your brochure request. You can safely download your documents from the following links.:\n\n'+brochurelinks;
               const emailparts = 
               {
                 "from": {"email": "team@investlincolnshire.co.uk", "name": "Team Invest Lincs"},
