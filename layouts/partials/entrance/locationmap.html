@@ -1,5 +1,5 @@
 
-<section class="section_banner-with-sidebar">
+<section class="section_transport-map">
     <div class="container">
         <div class="row">
             <div class="col-12 col-lg-9 pe-lg-0">
@@ -28,4 +28,7 @@
             </div>
         </div>
     </div>
+    {{ if .Params.multimodal.display }}
+    {{ partial "multimodal.html" . }}
+ {{ end }}
 </section>
