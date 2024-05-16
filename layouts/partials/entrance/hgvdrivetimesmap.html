@@ -41,4 +41,7 @@
 
 
     </div>
+    {{ if .Params.multimodal.display }}
+      {{ partial "multimodal.html" . }}
+    {{ end }}
 </section>
