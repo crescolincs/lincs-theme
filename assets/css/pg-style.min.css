@@ -5000,6 +5000,18 @@ a.full-card-click:after {
 .sector_low-carbon-energy .contentblock p:first-of-type{color:#005b71;}
 .sector_intelligent-robotics .contentblock h3{color:#7a7a7f;} 
 .sector_intelligent-robotics .contentblock p:first-of-type{color:#2b3033;}
+.sector_intelligent-robotics h3 {
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  font-family: josefin-sans, sans-serif;
+  color: #7a7a7f;
+}
+
+.sector_intelligent-robotics img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+}
 
 .section_brochure-download-form .card {
   border: 0;
