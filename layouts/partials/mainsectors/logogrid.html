@@ -25,8 +25,8 @@
   display: grid;
   max-width: 100%;
   grid-auto-flow: column;
-  grid-auto-columns: 290px;
-  grid-gap: 3rem;
+  grid-auto-columns: 145px;
+  grid-gap: 1.5rem;
   align-items: center;
 }
 
@@ -71,7 +71,7 @@ arrows svg {
 <div id="ezpzwrap">
          <div class="scroller hidescrollbar" id="ezpzcontent">
             {{ range .Params.companylogos.companies }}
-             <img src="{{ $imagedomain }}w_290/{{.logo }}" alt="{{ .name }}">
+             <img src="{{ $imagedomain }}w_145/{{.logo }}" alt="{{ .name }}">
              {{ end }}
          </div>
         </div>
