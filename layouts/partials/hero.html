@@ -7,7 +7,7 @@
             </div>
             <div class="col-12 col-lg-7 mt-sm-5">
                 <div class="img-wrapper pl10">
-                    <img src="{{ .Site.Params.imagedomain }}{{ .Params.hero.heroImg }}" alt="Sector image">
+                    <img src='{{ replace .Params.hero.heroImg "upload/" "upload/w_750/q_auto,f_auto/" }}' alt="Sector image">
                 </div>
             </div>
 
