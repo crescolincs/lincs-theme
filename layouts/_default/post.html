@@ -10,7 +10,7 @@
                 <h1 class="text-sector-mid">{{ .Params.title}}</h1>
 
                 <div class="img-wrapper">
-                    <img src="{{$imagedomain}}w_1200/{{ .Params.image}}" alt="" />
+                    <img src={{ replace .Params.image "upload/" "upload/w_1200/q_auto,f_auto/" }} alt="" />
                 </div>
             </div>
         </div>

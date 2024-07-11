@@ -9,7 +9,7 @@
             <div class="col-12 col-lg-4 position-relative sector_{{.Params.sector}}">
                 <div class="card shadow">
                     <div class="card-header">
-                        <img loading="lazy" src={{ replace .Params.image "upload/" "upload/w_416/" }} alt="">
+                        <img loading="lazy" src={{ replace .Params.image "upload/" "upload/w_416/q_auto,f_auto/" }} alt="">
                     </div>
                     <div class="card-body">
                         <p class="text-sector-mid"><small>{{ .Params.sector | strings.FirstUpper }}</small></p>
