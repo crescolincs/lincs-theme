@@ -71,7 +71,7 @@ arrows svg {
 <div id="ezpzwrap">
          <div class="scroller hidescrollbar" id="ezpzcontent">
             {{ range .Params.companylogos.companies }}
-             <img src="{{ $imagedomain }}w_145/{{.logo }}" alt="{{ .name }}">
+             <img src={{ replace .logo "upload/" "upload/w_145,f_auto,q_auto/" }} alt="{{ .name }}">
              {{ end }}
          </div>
         </div>

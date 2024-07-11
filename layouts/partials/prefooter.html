@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row justify-content-end">
             <div class="col-12 col-lg-8">
-                <img loading="lazy" src="{{ .Site.Params.imagedomain }}w_856,h_306,c_fit/{{ .Params.prefooterimage }}" alt="just a decorative image">
+                <img loading="lazy" src={{ replace .Params.prefooterimage "upload/" "upload/w_856,h_306,c_fit/" }} alt="a decorative image">
             </div>
         </div>
     </div>

@@ -45,7 +45,7 @@
                         </div>
                         <div class="col-12 col-lg-6 d-flex align-items-center mt-5">
                             <div class="img-wrapper">
-                                <img loading="lazy" src="{{ $imagedomain }}{{ .Params.sectorCTA.image }}" alt="">
+                                <img loading="lazy" src={{ replace .Params.sectorCTA.image "upload/" "upload/w_650,f_auto,q_auto/"}} alt="">
                             </div>
                         </div>
                     </div>
@@ -56,7 +56,7 @@
                
 
                 <div class="img-wrapper">
-                    <img src="{{ $imagedomain }}{{ .Params.sectorCTA.footerimg }}" alt="">
+                    <img src={{ replace .Params.sectorCTA.footerimg "upload/" "upload/w_1296,f_auto,q_auto/"}} alt="">
                 </div>
             </div>
         </div>

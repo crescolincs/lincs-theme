@@ -5,7 +5,7 @@
     <div class="col-12 col-lg-6 mb-3 mb-lg-5">
         <div class="content-wrapper px-3 px-lg-4 d-flex">
             <div class="icon-wrapper d-flex justify-content-center">
-                <img src="{{$imagedomain}}{{ .icon }}" alt="">
+                <img src={{ replace .icon "upload/" "upload/w_80/"}} alt="">
             </div>
             <div class="text-wrapper ps-4 ps-lg-5">
                 <h4 class="mt-0">{{ .by }}</h4>

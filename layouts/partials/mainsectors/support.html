@@ -18,7 +18,7 @@
             </div>
             <div class="col-12 col-lg-6">
                 <div class="img-wrapper">
-                    <img loading="lazy" src="{{ $imagedomain }}{{ .Params.support.image }}" alt="">
+                    <img loading="lazy" src={{ replace .Params.support.image "upload/" "upload/q_auto,f_auto/" }} alt="">
                 </div>
             </div>
         </div>
