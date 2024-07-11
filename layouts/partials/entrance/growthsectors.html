@@ -14,7 +14,7 @@
               <div class="col-12 col-lg-4 card-wrapper position-relative">
                   <div class="card shadow">
                       <div class="card-header">
-                          <img loading="lazy" src="{{$imagedomain}}w_416,h_250,c_fit/{{ .image }}" alt="a photograph representing the {{ .sectorname }} sector.">
+                          <img loading="lazy" src={{ replace .image "upload/" "upload/w_416,h_250,c_fit/" }} alt="a photograph representing the {{ .sectorname }} sector.">
                       </div>
                       <div class="card-body">
                           <h3><a class="full-card-click arrow-link {{ .colour }}" href="{{ .destination }}">{{ .sectorname }}</a></h3>
