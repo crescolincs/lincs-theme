@@ -6,10 +6,7 @@
                 <h2 class="h2-small text-dark-blue mb-4 text-center">{{ .Params.articles.heading }}</h2>
             </div>
         </div>
-        <div class="row">
-
-
-           
+        <div class="row">          
             {{ range first 3 (where .Site.Pages "Type" "article") }}
             <div class="col-12 col-lg-4 position-relative">
                 <div class="card shadow">
