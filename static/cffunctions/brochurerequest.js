@@ -130,7 +130,7 @@ export async function onRequestPost(context) {
           },
               "to": [
           {"email": "crescolincs@gmail.com", "name": "Cresco Lincs"},
-          {"email": "dklongley@clarity-strategies.com", "name": "Clarity"}
+          {"email": "investment@lincolnshire.gov.uk", "name": "Investment"}
           ],
           "subject": "Invest Lincolnshire Enquiry from "+formreceived.name,
           "text": bodyofemail,//"url.pathname "+requrl+" the request method was"+request.method+" you submitted the following email address "+formReceived.fields.email+" hidden name of the form "+formReceived.fields.sender,
