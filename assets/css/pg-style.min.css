@@ -205,6 +205,9 @@
   --bs-form-invalid-border-color: #dc3545;
   --sector-agrifood-mid: #009e7f;
   --sector-agrifood-dark: #126160;
+  --film-light: #f8f9e8;
+  --film-mid: #b9bf15;
+  --film-dark: #004650;
   ;
 }
 
@@ -11056,3 +11059,189 @@ a.full-card-click:after {
   font-weight: 700;
   width: fit-content
 }
+
+:root {
+  --film-light: #f8f9e8;
+  --film-mid: #b9bf15;
+  --film-dark: #004650;
+}
+
+.sector_film .bg-sector-light {
+  background-color: var(--film-light);
+}
+.sector_film .text-sector-mid {
+    color: var(--film-mid);
+}
+
+.sector_film .section_investment-opportunity-block .icon-wrapper img {
+    -webkit-filter: invert(62%) sepia(96%) saturate(384%) hue-rotate(20deg) brightness(96%) contrast(95%);
+    filter: invert(62%) sepia(96%) saturate(384%) hue-rotate(20deg) brightness(96%) contrast(95%);
+}
+
+.sector_film .text-sector-mid {
+  color: var(--film-mid);
+}
+.sector_film .text-sector-dark, .sector_film .text-sector-dark p:first-of-type {
+  color: var(--film-dark);
+}
+
+.sector_film .section_list-and-stats ul li::marker, .sector_film .section_50-50-image-content-download ul li::marker {
+  color: var(--film-mid);
+}
+
+.sector_film .border-sector-light {
+  border: .1875rem solid var(--film-light);
+}
+
+.sector_film .border-sector-dark {
+  border: .1875rem solid var(--film-dark);
+}
+
+.sector_film .text-sector-light {
+  color: var(--film-light);
+}
+
+.sector_film .text-sector-mid {
+  color: var(--film-mid);
+}
+
+.sector_film .border-sector-light svg.svgdownarrow {
+  fill: var(--film-light);
+  transition: .3s;
+}
+
+.sector_film .border-sector-dark svg.svgdownarrow {
+  fill: var(--film-dark);
+  transition: .3s;
+}
+
+.sector_film .section_full-width-banner {
+  background-color: var(--film-mid);
+  padding: 1.25rem 0;
+}
+
+.sector_film .section_get-data-form .form-content-wrapper ul li::marker {
+  color: var(--film-mid);
+}
+
+.sector_film .btn-submit {
+  background-color: var(--film-mid) !important;
+  color: #fff;
+}
+
+.sector_film .btn-submit:hover {
+  background-color: var(--film-dark) !important;
+  color: #fff;
+}
+
+.sector_film .text-white{
+  color: var(--film-dark)!important;
+}
+
+.sector_film .section_get-data-form form .form-content-wrapper .fields {
+    border-left: .0625rem solid var(--film-dark);
+    padding: 0 3.125rem;
+    border-right: .0625rem solid var(--film-dark);
+}
+
+.sector_film ::placeholder {
+  color: var(--film-dark);
+  opacity: 1; /* Firefox */
+}
+
+.sector_film ::-ms-input-placeholder { /* Edge 12 -18 */
+  color: var(--film-dark);
+}
+.sector_film .section_get-data-form .field-wrapper .checkbox-label .checkmark {
+    
+    border: .0625rem solid var(--film-dark);
+
+}
+
+.sector_film .section_get-data-form .field-wrapper .checkbox-label .checkmark:after {
+    border: solid var(--film-dark);
+    border-width: 0 3px 3px 0;
+    height: .875rem;
+    left: .6875rem;
+    top: .375rem;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    width: .5rem
+}
+.sector_film .section_get-data-form .field-wrapper .checkbox-label input:checked~.checkmark {
+    background-color: var(--film-mid);
+}
+
+.sector_film .section_get-data-form form .form-content-wrapper .fields {
+    border-left: .0625rem solid var(--film-dark);
+    padding: 0 3.125rem;
+    border-right: .0625rem solid var(--film-dark);
+}
+.sector_film .section_get-data-form .field-wrapper label{
+color: var(--film-dark);
+}
+.section_get-data-form .field-wrapper .checkbox-label a {
+    color: var(--film-dark);
+    font-weight: 600
+}
+
+.sector_film .section_get-data-form .field-wrapper .checkbox-label a:hover {
+    color: var(--film-mid);
+}
+
+.sector_film .section_get-data-form .field-wrapper input:not([type=submit],[type=checkbox]), .sector_film .section_get-data-form .field-wrapper textarea {
+    background-color: transparent;
+    border: .0625rem solid var(--film-dark);
+    color: #000;
+    font-family: montserrat,sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    height: 3.125rem;
+    margin-bottom: 1.125rem;
+    padding: .625rem;
+    width: 100%;
+}
+
+.sector_film .section_get-data-form .field-wrapper input:not([type=submit],[type=checkbox])::-webkit-input-placeholder, .sector_film .section_get-data-form .field-wrapper textarea::-webkit-input-placeholder {
+    color: var(--film-mid);
+}
+
+.section_get-data-form .field-wrapper input:not([type=submit],[type=checkbox])::-moz-placeholder, .sector_film .section_get-data-form .field-wrapper textarea::-moz-placeholder {
+    color: var(--film-mid);
+}
+
+.sector_film .section_get-data-form .field-wrapper input:not([type=submit],[type=checkbox]):-ms-input-placeholder, .sector_film .section_get-data-form .field-wrapper textarea:-ms-input-placeholder {
+    color: var(--film-mid);
+}
+
+.sector_film .section_get-data-form .field-wrapper input:not([type=submit],[type=checkbox])::-ms-input-placeholder,.section_get-data-form .field-wrapper textarea::-ms-input-placeholder {
+    color: var(--film-mid);
+}
+
+.sector_film .section_get-data-form .field-wrapper input:not([type=submit],[type=checkbox])::placeholder,.section_get-data-form .field-wrapper textarea::placeholder {
+    color: var(--film-mid);
+}
+
+.sector_film .section_get-data-form .field-wrapper textarea {
+    height: 10.625rem;
+}
+
+.sector_film .section_get-data-form .field-wrapper p {
+    color: var(--film-dark);
+    font-size: .75rem;
+    line-height: 1.375rem;
+    margin-bottom: 0;
+    padding-left: 2.8125rem;
+}
+
+.sector_film .section_get-data-form .sectors-link {
+    font-size: 1rem
+}
+
+.sector_film .section_get-data-form .other-brochures {
+    color: #fff
+}
+
+
+
+
