@@ -1,0 +1,23 @@
+sectors:
+  - text: 'Advanced Engineering & Manufacturing'
+    brochure: https://brochures.investlincolnshire.co.uk/brochures/invest-lincs-aem-brochure.pdf
+  - text: 'Agrifood'
+    brochure: https://brochures.investlincolnshire.co.uk/brochures/invest-lincs-agrifood-brochure.pdf 
+  - text: 'Cold Chain'
+    brochure: https://brochures.investlincolnshire.co.uk/brochures/invest-lincs-cold-chain-brochure.pdf        
+  - text: 'Defence & Security'
+    brochure: https://brochures.investlincolnshire.co.uk/brochures/invest-lincs-defence-security-brochure.pdf 
+  - text: 'Fresh Produce'
+    brochure: https://brochures.investlincolnshire.co.uk/brochures/invest-lincs-fresh-produce-brochure.pdf  
+  - text: 'Live and Work in Lincolnshire'
+    brochure: https://brochures.investlincolnshire.co.uk/brochures/invest-lincs-live-work-brochure.pdf   
+  - text: 'Logistics'
+    brochure: https://brochures.investlincolnshire.co.uk/brochures/invest-lincs-logistics-brochure.pdf   
+  - text: 'Low Carbon Energy & Industry'
+    brochure: https://brochures.investlincolnshire.co.uk/brochures/invest-lincs-low-carbon-energy-brochure.pdf 
+  - text: 'Lincolnshire Seafood'
+    brochure: https://brochures.investlincolnshire.co.uk/brochures/invest-lincs-seafood-brochure.pdf         
+  - text: 'Visitor Economy'
+    brochure: https://brochures.investlincolnshire.co.uk/brochures/invest-lincs-visitor-economy-brochure.pdf  
+  #- text: 'AI & Intelligent Robotics'
+  #  brochure: 
