@@ -2,25 +2,26 @@
 
 <div class="container">
     <div class="row">
+        <style>a{text-decoration:none;} .download{color: #0a58ca;line-height: 0.5;}</style>
        
         {{ range .Params.brochurechoice.brochures}}
         
         <div class="col-12 col-lg-3 card-wrapper">
-            <a href="https://brochures.investlincolnshire.co.uk/brochures/{{ .url }}-brochure.pdf" target="_blank"></a>
+          <a href="https://brochures.investlincolnshire.co.uk/brochures/{{ .url }}-brochure.pdf" target="_blank">
             <div class="card shadow">
                 <div class="card-header {{ .clr }}">
                     <img loading="lazy" src={{ replace .image "upload/" "upload/w_200/q_auto,f_auto/" }} alt="">
                 </div>
-                <div class="card-body d-flex justify-content-between">
+                <div class="card-body justify-content-between">
                     <h2 class="m-0 text-green">{{ .title }}</h2>
-                    Download
+                    <h5 class="download">Download</h5>
 
                     <!--<div class="field-wrapper brochure-checkbox d-flex align-items-end"> 
                         
                     </div>-->
                 </div>
             </div>
-        </a>
+          </a>
         </div>
       
         {{ end }}
