@@ -4,8 +4,9 @@
     <div class="row">
        
         {{ range .Params.brochurechoice.brochures}}
-        <a href="https://brochures.investlincolnshire.co.uk/brochures/{{ .url }}-brochure.pdf" target="_blank">
+        
         <div class="col-12 col-lg-3 card-wrapper">
+            <a href="https://brochures.investlincolnshire.co.uk/brochures/{{ .url }}-brochure.pdf" target="_blank"></a>
             <div class="card shadow">
                 <div class="card-header {{ .clr }}">
                     <img loading="lazy" src={{ replace .image "upload/" "upload/w_200/q_auto,f_auto/" }} alt="">
@@ -19,8 +20,9 @@
                     </div>-->
                 </div>
             </div>
+        </a>
         </div>
-      </a>
+      
         {{ end }}
       
         <!--<div class="mb-3"><input class="btn btn-submit text-center" type="submit" value="Send Brochure Download Request"></div>-->
