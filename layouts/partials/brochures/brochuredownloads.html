@@ -4,6 +4,7 @@
     <div class="row">
        
         {{ range .Params.brochurechoice.brochures}}
+        <a href="https://brochures.investlincolnshire.co.uk/brochures/{{ .url }}-brochure.pdf" target="_blank">
         <div class="col-12 col-lg-3 card-wrapper">
             <div class="card shadow">
                 <div class="card-header {{ .clr }}">
@@ -11,16 +12,18 @@
                 </div>
                 <div class="card-body d-flex justify-content-between">
                     <h2 class="m-0 text-green">{{ .title }}</h2>
+                    Download
 
-                    <div class="field-wrapper brochure-checkbox d-flex align-items-end">
-                        <a href="https://brochures.investlincolnshire.co.uk/brochures/{{ .url }}-brochure.pdf">Download</a>
-                    </div>
+                    <!--<div class="field-wrapper brochure-checkbox d-flex align-items-end"> 
+                        
+                    </div>-->
                 </div>
             </div>
         </div>
+      </a>
         {{ end }}
       
-        <div class="mb-3"><input class="btn btn-submit text-center" type="submit" value="Send Brochure Download Request"></div>
+        <!--<div class="mb-3"><input class="btn btn-submit text-center" type="submit" value="Send Brochure Download Request"></div>-->
 
 
     </div>
