@@ -8,9 +8,9 @@
                 <p class="{{ .Params.sectorCTA.contentscolour }} text-center p-large">{{ .Params.sectorCTA.lead }}</p>
             </div>
             <div class="col-12 col-lg-12">
-                <form action="/{{ .Params.sectorCTA.formhandler }}" method="post" class="d-flex flex-column align-items-center justify-content-center">
+
                     <div class="form-content-wrapper d-lg-flex">
-                        <div class="col-12 col-lg-4 d-flex d-lg-block justify-content-center">
+                        <div class="col-12 col-lg-6 d-flex d-lg-block justify-content-center">
                             <style>main ul:not(.pagination) li::marker {content: "▷";font-family:system-ui;}</style>
                             <ul>
                                 {{ range .Params.sectorCTA.brochurecontents}}
@@ -18,40 +18,14 @@
                                 {{ end }}
                             </ul>
                         </div>
-                        <div class="col-12 col-lg-4">
-                            <div class="fields">
-                                <div class="field-wrapper">
-                                    <!-- <label for="full-name">Name</label>-->
-                                    <input type="text" id="name" name="name" required="" placeholder="*Name">
-                                </div>
-                                <div class="field-wrapper">
-                                    <!-- <label for="email-address">Email</label>-->
-                                    <input type="email" id="email" name="email" required="" placeholder="*Business Email">
-                                </div>
-                                <div class="field-wrapper">
-                                    <label class="checkbox-label" for="privacy-policy">* I agree to the <a href="{{ $.Site.Data.growthsectors.entrance }}/privacy-policy">privacy policy</a>.
-                                        <input type="checkbox" id="privacy-policy" name="privacy-policy" required="">
-                                        <span class="checkmark"></span>
-                                    </label>
-                                    <p><small>*(required) The data you submit here will only be used in relation to your enquiry. By submitting any enquires via this part of the website you are granting us permission to store and process your data as according to our privacy policy. Your information will never be sold on to any third parties.</small></p>
-                                </div>
-                                <div class="field-wrapper d-flex flex-column align-items-center">
-                                    {{range .Params.sectorCTA.hiddenformfields }}
-                                      <input type="hidden" id="{{ .field }}" name="{{ .field }}" value="{{ .value }}">
-                                    {{ end }}
-                                      <button class="btn btn-submit mt-3" type="submit">Submit to Download<i class="xfa-sharp xfa-regular xfa-arrow-right ms-4"><svg width="16" height="16" fill="#ffffff" version="1.1" viewBox="0 0 .96 .96" xmlns="http://www.w3.org/2000/svg"><path d="m0 0.55219 0.68407 4.8e-5 -0.30485 0.30557 0.10179 0.10219 0.47899-0.48014-0.47861-0.47986-0.10189 0.10219 0.30485 0.30557h-0.68426z" stroke-width=".04794"></path></svg></i></button>
-                                  </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-lg-6 d-flex align-items-center mt-5">
-                            <div class="img-wrapper">
-                                <img loading="lazy" src={{ replace .Params.sectorCTA.image "upload/" "upload/w_650,f_auto,q_auto/"}} alt="">
-                            </div>
-                        </div>
+
+                        <div class="col-12 col-lg-6 d-flex align-items-center mt-5"><div class="img-wrapper"><img loading="lazy" src="https://res.cloudinary.com/lincs/image/upload/w_650,f_auto,q_auto/v1730908664/Film-Locations-Mock-up.png" alt="">
+                            <a href="https://investlincolnshire.co.uk/brochures" style="text-decoration: none;">
+                        <button class="btn btn-submit mt-3" type="submit">Download Brochure<i class="xfa-sharp xfa-regular xfa-arrow-right ms-4"><svg width="16" height="16" fill="#fff" viewBox="0 0 .96 .96" xmlns="http://www.w3.org/2000/svg"><path d="m0 .55219.68407 48e-6-.30485.30557.10179.10219L.96.479858l-.47861-.47986-.10189.10219.30485.30557h-.68426z" stroke-width=".04794"></path></svg></i></button></a>
+                        </div></div>
                     </div>
 
 
-                </form>
 
                
 
