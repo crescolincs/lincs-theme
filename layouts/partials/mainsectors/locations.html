@@ -2,10 +2,23 @@
 
 {{ range sort .Params.locations.items "Name" "asc" }}
   {{ if .display }}
-    <div class="item">
-      <img src="{{ .Thumbnail }}" alt="{{ .Name }}">
-      <h2>{{ .Name }}</h2>
-      <a href="{{ .pdf }}">Download PDF</a>
-    </div>
+        <div class="col-12 col-lg-3 card-wrapper">
+          <a href="{{ .pdf }}" target="_blank">
+            <div class="card shadow">
+                <div class="card-header {{ .clr }}">
+                    <img src="{{ .Thumbnail }}" alt="{{ .Name }}">
+                </div>
+                <div class="card-body justify-content-between">
+                    <h2 class="m-0 text-green">{{ .Name }}</h2>
+                    <h5 class="download">Download</h5>
+
+                    <!--<div class="field-wrapper brochure-checkbox d-flex align-items-end"> 
+                        
+                    </div>-->
+                </div>
+            </div>
+          </a>
+        </div>
   {{ end }}
 {{ end }}
+
