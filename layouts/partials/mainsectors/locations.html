@@ -1,0 +1,11 @@
+{{$imagedomain := string .Site.Params.imagedomain }}
+
+{{ range sort .Params.locations.items "Name" "asc" }}
+  {{ if .display }}
+    <div class="item">
+      <img src="{{ .Thumbnail }}" alt="{{ .Name }}">
+      <h2>{{ .Name }}</h2>
+      <a href="{{ .pdf }}">Download PDF</a>
+    </div>
+  {{ end }}
+{{ end }}

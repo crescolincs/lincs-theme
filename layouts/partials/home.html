@@ -49,6 +49,10 @@
        {{ partial "mainsectors/articles.html" . }}
     {{ end }}
 
+    {{ if .Params.locations.display }}
+       {{ partial "mainsectors/locations.html" . }}
+    {{ end }}
+
     {{ if .Params.prefooterimage }}
        {{ partial "prefooter.html" . }}
     {{ end }}
