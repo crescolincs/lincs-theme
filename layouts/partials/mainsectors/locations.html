@@ -2,31 +2,40 @@
 
 <style>
   .bgblack{
-    background-color: black;
+    background-color: #2D3137;
   }
 .parent {
 display: grid;
 grid-template-columns: repeat(5, 1fr);
-grid-template-rows: repeat(1, 1fr);
+grid-template-rows: repeat(2, 1fr);
 grid-column-gap: 0px;
 grid-row-gap: 0px;
 }
 .herotext{
+    z-index:999;
   grid-column-start: 1;
   grid-column-end: 4;
+  grid-row-start: 2;
+  grid-row-end: 3;
   color: white;
-  .h1{
+  h1{
     color: white;
-    font-size: 3rem;
+    font-size: 6rem;
+    line-height: 7rem;
+letter-spacing: 1.5rem;
   }
 }
 .heroimg{
-  grid-column-start: 3;
-  grid-column-end: 5;
-  object-fit: fill;
+  grid-column-start: 1;
+  grid-column-end: 6;
+  grid-row-start: 1;
+  grid-row-end: 3;
+  object-fit:contain;
+  height:100%"
 }
 
 </style>
+
 <section class="section_header-50-50 bgblack">
     <div class="container">
         <div class="parent">
