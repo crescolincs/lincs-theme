@@ -1,6 +1,9 @@
 {{$imagedomain := string .Site.Params.imagedomain }}
 
 <style>
+  .bgblack{
+    background-color: black;
+  }
 .parent {
 display: grid;
 grid-template-columns: repeat(5, 1fr);
@@ -12,6 +15,10 @@ grid-row-gap: 0px;
   grid-column-start: 1;
   grid-column-end: 4;
   color: white;
+  .h1{
+    color: white;
+    font-size: 3rem;
+  }
 }
 .heroimg{
   grid-column-start: 3;
