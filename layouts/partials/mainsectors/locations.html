@@ -1,6 +1,13 @@
 {{$imagedomain := string .Site.Params.imagedomain }}
 
 <style>
+.sector_locations.section_header-50-50{
+  background-color: #2D3137;
+  h1, .p-large{
+    color: #ffffff;
+  }
+
+}
 .section_header-50-50 .img-wrapper img {
   width:98vw;
   object-fit: fill;
@@ -65,7 +72,7 @@ a{
 
 </style>
 
-<section class="section_header-50-50 bgblack">
+<!--<section class="section_header-50-50 bgblack">
     <div class="container">
         <div class="parent">
             <div class="herotext ">
@@ -80,7 +87,7 @@ a{
 
         </div>
     </div>
-</section>
+</section> -->
 <div class="container downloads">
 <div class="row">
   {{ with .Params.locations.map }}
