@@ -1,4 +1,31 @@
 {{$imagedomain := string .Site.Params.imagedomain }}
+
+<style>
+.parent {
+display: grid;
+grid-template-columns: repeat(5, 1fr);
+grid-template-rows: repeat(5, 1fr);
+grid-column-gap: 0px;
+grid-row-gap: 0px;
+}
+
+</style>
+<section class="section_header-50-50">
+    <div class="container">
+        <div class="parent">
+            <div class=" herotext ">
+                <h1 class="text-sector-mid">{{ .Params.hero.heading }}</h1>
+                <div class="p-large">{{ .Params.hero.blurb }}</div>
+            </div>
+            <div class="heroimg">
+                <div class="img-wrapper pl10">
+                    <img src="{{ .Params.hero.heroImg }}}}" alt="Sector image">
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
 <div class="container">
 <div class="row">
 {{ range sort .Params.locations.items "Name" "asc" }}
