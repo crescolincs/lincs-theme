@@ -1,8 +1,10 @@
 {{$imagedomain := string .Site.Params.imagedomain }}
 
 <style>
+
   .bgblack{
     background-color: #2D3137;
+    padding:0;
   }
 .parent {
 display: grid;
@@ -33,6 +35,9 @@ letter-spacing: 1.5rem;
   object-fit:contain;
   height:100%"
 }
+.downloads{
+  padding-top: 5rem;
+}
 
 </style>
 
@@ -40,7 +45,7 @@ letter-spacing: 1.5rem;
     <div class="container">
         <div class="parent">
             <div class="herotext ">
-                <h1 class="text-sector-mid">{{ .Params.hero.heading }}</h1>
+                <h1 class="">{{ .Params.hero.heading }}</h1>
                 <div class="p-large">{{ .Params.hero.blurb }}</div>
             </div>
             <div class="heroimg">
@@ -52,7 +57,7 @@ letter-spacing: 1.5rem;
         </div>
     </div>
 </section>
-<div class="container">
+<div class="container downloads">
 <div class="row">
 {{ range sort .Params.locations.items "Name" "asc" }}
   {{ if .display }}
