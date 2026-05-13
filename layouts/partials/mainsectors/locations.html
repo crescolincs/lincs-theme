@@ -83,6 +83,23 @@ a{
 </section>
 <div class="container downloads">
 <div class="row">
+  {{ with .Params.locations.map }}
+    {{ if .display }}
+        <div class="col-12 col-lg-4 card-wrapper">
+          <a href="{{ .pdf }}" target="_blank">
+            <div class="card shadow">
+                <div class="card-header {{ .clr }}">
+                    <img src="{{ .Thumbnail }}" alt="{{ .Name }}">
+                </div>
+                <div class="card-body justify-content-between">
+                    <h2 class="m-0 text-green">{{ .Name }}</h2>
+                    <h5 class="download">Download</h5>
+                </div>
+            </div>
+          </a>
+        </div>
+    {{ end }}
+  {{ end }}
 {{ range sort .Params.locations.items "Name" "asc" }}
   {{ if .display }}
         <div class="col-12 col-lg-4 card-wrapper">
