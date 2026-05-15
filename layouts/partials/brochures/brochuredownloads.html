@@ -10,7 +10,7 @@
         {{ range .Params.brochurechoice.brochures}}
         
         <div class="col-12 col-lg-3 card-wrapper">
-          <a href="https://brochures.investlincolnshire.co.uk/brochures/{{ .url }}-brochure.pdf" download="https://brochures.investlincolnshire.co.uk/brochures/{{ .url }}-brochure.pdf">
+          <a href="https://brochures.investlincolnshire.co.uk/brochures/{{ .url }}-brochure.pdf" download>
             <div class="card shadow">
                 <div class="card-header {{ .clr }}">
                     <img loading="lazy" src={{ replace .image "upload/" "upload/w_200/q_auto,f_auto/" }} alt="">
