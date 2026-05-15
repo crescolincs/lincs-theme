@@ -6,6 +6,8 @@ location: https://investlincolnshire.co.uk/location-and-connectivity
 
 support: https://investlincolnshire.co.uk/support-services
 
+sites: https://sites.investlincolnshire.co.uk/
+
 sectors:
   - text: 'Advanced Engineering & Manufacturing'
     link: 'https://engineering-manufacturing.investlincolnshire.co.uk/'
@@ -22,4 +24,6 @@ sectors:
   - text: 'Visitor Economy'
     link: 'https://visitor-economy.investlincolnshire.co.uk/'
   - text: 'Film Locations'
-    link: 'https://film-location.investlincolnshire.co.uk/'    
+    link: 'https://film-location.investlincolnshire.co.uk/'
+  - text: 'Investment Sites'
+    link: 'https://sites.investlincolnshire.co.uk/'   
