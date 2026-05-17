@@ -135,7 +135,7 @@ a{
                  {{ $name := .Name }}
                  {{ with $.Page.Resources.GetMatch $thumbnail }}
                    {{ with .Resize "400x" }}
-                      <img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" alt="{{ $mapname }}">
+                      <img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" alt="{{ $name }}">
                    {{ end }}
                  {{ end }}
                 </div>
