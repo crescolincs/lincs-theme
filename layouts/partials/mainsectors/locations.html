@@ -109,9 +109,10 @@ a{
             <div class="card shadow">
                 <div class="card-header {{ .clr }}">
                  {{ $thumbnail := .Thumbnail }}
+                 {{ $mapname := .Name }}
                  {{ with $.Page.Resources.GetMatch $thumbnail }}
                    {{ with .Resize "400x" }}
-                      <img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}">
+                      <img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" alt="{{ $mapname }}">
                    {{ end }}
                  {{ end }}
                 </div>
@@ -130,7 +131,13 @@ a{
           <a href="{{ .pdf }}"  download="{{ .pdf }}">
             <div class="card shadow">
                 <div class="card-header {{ .clr }}">
-                    <img src="{{ .Thumbnail }}" alt="{{ .Name }}">
+                 {{ $thumbnail := .Thumbnail }}
+                 {{ $name := .Name }}
+                 {{ with $.Page.Resources.GetMatch $thumbnail }}
+                   {{ with .Resize "400x" }}
+                      <img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" alt="{{ $mapname }}">
+                   {{ end }}
+                 {{ end }}
                 </div>
                 <div class="card-body justify-content-between">
                     <h2 class="m-0 text-green">{{ .Name }}</h2>
