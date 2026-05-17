@@ -109,9 +109,9 @@ a{
             <div class="card shadow">
                 <div class="card-header {{ .clr }}">
                  {{ with .Resources.Get .Thumbnail }}
-                   {{ with .Resize "320x" }}
+
                     <img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}">
-                   {{ end }}
+
                  {{ end }}
                 </div>
                 <div class="card-body justify-content-between">
