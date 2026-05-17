@@ -108,10 +108,11 @@ a{
           <a href="{{ .pdf }}" download="{{ .pdf }}">
             <div class="card shadow">
                 <div class="card-header {{ .clr }}">
-                 {{ with .Resources.Get .Thumbnail }}
-
-                    <img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}">
-
+                 {{ $thumbnail := .Thumbnail }}
+                 {{ with $.Page.Resources.GetMatch $thumbnail }}
+                   {{ with .Resize "400x" }}
+                      <img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}">
+                   {{ end }}
                  {{ end }}
                 </div>
                 <div class="card-body justify-content-between">
