@@ -16,44 +16,11 @@
     background-color: #2D3137;
     padding:0;
   }
-.parent {
-display: grid;
-grid-template-columns: repeat(5, 1fr);
-grid-template-rows: repeat(1, 1fr);
-grid-column-gap: 0px;
-grid-row-gap: 0px;
-max-height: 744px;
-overflow: hidden;
-}
+
 .mt-sm-5{
   margin-top:0 !important;
 }
-.herotext{
-    z-index:999;
-  grid-column-start: 1;
-  grid-column-end: 4;
-  grid-row-start: 1;
-  grid-row-end: 2;
-  align-self: end;
-  padding-bottom: 2rem;
-  color: white;
-  h1{
-    color: white;
-    font-size: clamp(2.5rem, 8vw, 6rem);
-    line-height: 1.1;
-    letter-spacing: clamp(0.2rem, 1vw, 1.5rem);
-  }
-}
-.heroimg{
-  grid-column-start: 1;
-  grid-column-end: 6;
-  grid-row-start: 1;
-  grid-row-end: 3;
-  object-fit:contain;
-  max-height: 744px;
-   img{width: auto;}
-  
-}
+
 .downloads{
   padding-top: 5rem;
 }
@@ -83,23 +50,6 @@ a{
 }
 
 </style>
-
-<!-- <section class="section_header-50-50 bgblack">
-    <div class="container">
-        <div class="parent">
-            <div class="herotext ">
-                <h1 class="">{{ .Params.hero.heading }}</h1>
-                <div class="p-large">{{ .Params.hero.blurb }}</div>
-            </div>
-            <div class="heroimg">
-                <div class="img-wrapper pl10">
-                    <img src="{{ .Params.hero.heroImg }}" alt="Sector image">
-                </div>
-            </div>
-
-        </div>
-    </div>
-</section> -->
 <div class="container downloads">
 <div class="row">
   {{ with .Params.locations.map }}
