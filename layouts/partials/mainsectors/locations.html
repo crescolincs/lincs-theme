@@ -111,7 +111,7 @@ a{
                  {{ $thumbnail := .Thumbnail }}
                  {{ $mapname := .Name }}
                  {{ with $.Page.Resources.GetMatch $thumbnail }}
-                   {{ with .Resize "400x" }}
+                   {{ with .Resize "640x" }}
                       <img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" alt="{{ $mapname }}">
                    {{ end }}
                  {{ end }}
@@ -134,7 +134,7 @@ a{
                  {{ $thumbnail := .Thumbnail }}
                  {{ $name := .Name }}
                  {{ with $.Page.Resources.GetMatch $thumbnail }}
-                   {{ with .Resize "400x" }}
+                   {{ with .Resize "640x" }}
                       <img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" alt="{{ $name }}">
                    {{ end }}
                  {{ end }}
