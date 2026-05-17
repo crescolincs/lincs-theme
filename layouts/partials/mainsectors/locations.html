@@ -110,7 +110,7 @@ a{
                 <div class="card-header {{ .clr }}">
                  {{ with .Resources.Get .Thumbnail }}
                    {{ with .Resize "320x" }}
-                    <img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" alt="{{ .Name }}">
+                    <img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}">
                    {{ end }}
                  {{ end }}
                 </div>
