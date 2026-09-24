@@ -7,8 +7,9 @@
     {{ range .Pages }}
        <div>
          <h3><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h3>
+         <img src="{{ .Params.image }}"/>
          {{ .Summary }}
-         {{ .Params.image }}
+         
        </div>
     {{ end }}
   </div>
